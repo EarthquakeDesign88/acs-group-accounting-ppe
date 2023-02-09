@@ -1,0 +1,10 @@
+Datetime: 2023-01-30 08:50:00
+IP Address: ::1
+User: sureeporn
+Action: SAVE_PAYMENT_EDIT
+Status: S
+Ref: 
+Detail: a:1:{s:6:"detail";s:77:"แก้ไขใบสำคัญจ่าย เลขที่ CM6601030";}
+Data GET: a:3:{s:3:"cid";s:4:"C001";s:3:"dep";s:4:"D003";s:6:"action";s:9:"save_edit";}
+Data POST: a:9:{s:7:"paym_id";s:4:"2534";s:7:"depname";s:2:"CM";s:10:"paymstatus";s:24:"ค้างจ่าย";s:12:"paym_typepay";s:1:"1";s:7:"cheq_no";s:0:"";s:9:"cheq_date";s:0:"";s:11:"cheq_bankid";s:0:"";s:6:"inv_id";a:1:{i:3244;s:5:" 3244";}s:9:"paym_note";s:0:"";}
+-------------------------

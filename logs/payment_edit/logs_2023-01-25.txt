@@ -1,0 +1,30 @@
+Datetime: 2023-01-25 17:00:00
+IP Address: 58.11.6.65
+User: AD59013
+Action: SAVE_PAYMENT_EDIT
+Status: S
+Ref: 
+Detail: a:1:{s:6:"detail";s:73:"แก้ไขใบสำคัญจ่าย เลขที่ error";}
+Data GET: a:3:{s:3:"cid";s:4:"C014";s:3:"dep";s:4:"D004";s:6:"action";s:9:"save_edit";}
+Data POST: a:9:{s:7:"paym_id";s:4:"2520";s:7:"depname";s:4:"ACSI";s:10:"paymstatus";s:24:"ค้างจ่าย";s:12:"paym_typepay";s:1:"2";s:7:"cheq_no";s:1:"3";s:9:"cheq_date";s:10:"2023-01-25";s:11:"cheq_bankid";s:4:"B001";s:6:"inv_id";a:3:{i:3315;s:5:" 3315";i:3316;s:5:" 3316";i:3317;s:5:" 3317";}s:9:"paym_note";s:0:"";}
+-------------------------
+Datetime: 2023-01-25 17:02:07
+IP Address: 58.11.6.65
+User: AD59013
+Action: SAVE_PAYMENT_EDIT
+Status: S
+Ref: 
+Detail: a:1:{s:6:"detail";s:73:"แก้ไขใบสำคัญจ่าย เลขที่ error";}
+Data GET: a:3:{s:3:"cid";s:4:"C014";s:3:"dep";s:4:"D004";s:6:"action";s:9:"save_edit";}
+Data POST: a:9:{s:7:"paym_id";s:4:"2520";s:7:"depname";s:4:"ACSI";s:10:"paymstatus";s:24:"ค้างจ่าย";s:12:"paym_typepay";s:1:"2";s:7:"cheq_no";s:1:"4";s:9:"cheq_date";s:10:"2023-01-25";s:11:"cheq_bankid";s:4:"B001";s:6:"inv_id";a:3:{i:3315;s:5:" 3315";i:3316;s:5:" 3316";i:3317;s:5:" 3317";}s:9:"paym_note";s:0:"";}
+-------------------------
+Datetime: 2023-01-25 20:38:57
+IP Address: 110.169.220.227
+User: sureeporn
+Action: SAVE_PAYMENT_EDIT
+Status: S
+Ref: 
+Detail: a:1:{s:6:"detail";s:73:"แก้ไขใบสำคัญจ่าย เลขที่ error";}
+Data GET: a:3:{s:3:"cid";s:4:"C001";s:3:"dep";s:4:"D003";s:6:"action";s:9:"save_edit";}
+Data POST: a:9:{s:7:"paym_id";s:4:"2508";s:7:"depname";s:2:"CM";s:10:"paymstatus";s:24:"ค้างจ่าย";s:12:"paym_typepay";s:1:"2";s:7:"cheq_no";s:10:"hfdhdfhdhf";s:9:"cheq_date";s:10:"2023-01-25";s:11:"cheq_bankid";s:4:"B003";s:6:"inv_id";a:1:{i:3302;s:5:" 3302";}s:9:"paym_note";s:0:"";}
+-------------------------

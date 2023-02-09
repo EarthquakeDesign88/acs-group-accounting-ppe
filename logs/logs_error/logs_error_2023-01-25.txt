@@ -1,0 +1,41 @@
+[25-Jan-2023 08:42:31 Asia/Bangkok] PHP Warning:  Undefined variable $obj_row in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/receipt_seepdf.php on line 26
+[25-Jan-2023 08:42:31 Asia/Bangkok] PHP Warning:  Trying to access array offset on value of type null in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/receipt_seepdf.php on line 26
+[25-Jan-2023 08:42:31 Asia/Bangkok] PHP Warning:  Undefined variable $obj_row in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/receipt_seepdf.php on line 26
+[25-Jan-2023 08:42:31 Asia/Bangkok] PHP Warning:  Trying to access array offset on value of type null in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/receipt_seepdf.php on line 26
+[25-Jan-2023 08:42:31 Asia/Bangkok] PHP Warning:  Undefined variable $obj_row in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/receipt_seepdf.php on line 26
+[25-Jan-2023 08:42:31 Asia/Bangkok] PHP Warning:  Trying to access array offset on value of type null in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/receipt_seepdf.php on line 26
+[25-Jan-2023 08:42:31 Asia/Bangkok] PHP Warning:  Undefined variable $obj_row in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/receipt_seepdf.php on line 26
+[25-Jan-2023 08:42:31 Asia/Bangkok] PHP Warning:  Trying to access array offset on value of type null in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/receipt_seepdf.php on line 26
+[25-Jan-2023 08:59:42 Asia/Bangkok] PHP Warning:  Undefined array key "projid" in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/invoice_rcpt.php on line 21
+[25-Jan-2023 09:02:20 Asia/Bangkok] PHP Warning:  Undefined array key "projid" in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/invoice_rcpt.php on line 21
+[25-Jan-2023 09:19:52 Asia/Bangkok] PHP Warning:  Undefined array key "projid" in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/invoice_rcpt.php on line 21
+[25-Jan-2023 09:20:44 Asia/Bangkok] PHP Warning:  Undefined array key "projid" in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/invoice_rcpt.php on line 21
+[25-Jan-2023 09:21:49 Asia/Bangkok] PHP Warning:  Undefined array key "projid" in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/invoice_rcpt.php on line 21
+[25-Jan-2023 09:22:13 Asia/Bangkok] PHP Warning:  Undefined array key "projid" in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/invoice_rcpt.php on line 21
+[25-Jan-2023 09:22:42 Asia/Bangkok] PHP Warning:  Undefined array key "projid" in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/invoice_rcpt.php on line 21
+[25-Jan-2023 09:25:57 Asia/Bangkok] PHP Warning:  Undefined array key "projid" in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/invoice_rcpt.php on line 21
+[25-Jan-2023 09:26:54 Asia/Bangkok] PHP Warning:  Undefined array key "projid" in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/invoice_rcpt.php on line 21
+[25-Jan-2023 09:27:04 Asia/Bangkok] PHP Warning:  Undefined array key "projid" in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/invoice_rcpt.php on line 21
+[25-Jan-2023 09:27:43 Asia/Bangkok] PHP Warning:  Undefined array key "projid" in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/invoice_rcpt.php on line 21
+[25-Jan-2023 09:28:56 Asia/Bangkok] PHP Warning:  Undefined array key "projid" in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/invoice_rcpt.php on line 21
+[25-Jan-2023 09:30:14 Asia/Bangkok] PHP Warning:  Undefined array key "projid" in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/invoice_rcpt.php on line 21
+[25-Jan-2023 09:30:50 Asia/Bangkok] PHP Warning:  Undefined array key "projid" in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/invoice_rcpt.php on line 21
+[25-Jan-2023 09:32:03 Asia/Bangkok] PHP Warning:  Undefined array key "projid" in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/invoice_rcpt.php on line 21
+[25-Jan-2023 09:32:49 Asia/Bangkok] PHP Warning:  Undefined array key "projid" in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/invoice_rcpt.php on line 21
+[25-Jan-2023 09:34:18 Asia/Bangkok] PHP Warning:  Undefined array key "projid" in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/invoice_rcpt.php on line 21
+[25-Jan-2023 09:36:31 Asia/Bangkok] PHP Warning:  Undefined array key "projid" in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/invoice_rcpt.php on line 21
+[25-Jan-2023 10:04:54 Asia/Bangkok] PHP Warning:  Undefined array key "projid" in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/invoice_rcpt.php on line 21
+[25-Jan-2023 10:08:17 Asia/Bangkok] PHP Warning:  Undefined array key "projid" in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/invoice_rcpt.php on line 21
+[25-Jan-2023 10:13:28 Asia/Bangkok] PHP Warning:  Undefined array key "projid" in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/invoice_rcpt.php on line 21
+[25-Jan-2023 10:14:01 Asia/Bangkok] PHP Warning:  Undefined array key "projid" in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/invoice_rcpt.php on line 21
+[25-Jan-2023 10:15:15 Asia/Bangkok] PHP Warning:  Undefined array key "projid" in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/invoice_rcpt.php on line 21
+[25-Jan-2023 10:15:28 Asia/Bangkok] PHP Warning:  Undefined array key "projid" in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/invoice_rcpt.php on line 21
+[25-Jan-2023 10:16:26 Asia/Bangkok] PHP Warning:  Undefined array key "projid" in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/invoice_rcpt.php on line 21
+[25-Jan-2023 10:16:28 Asia/Bangkok] PHP Warning:  Undefined array key "projid" in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/invoice_rcpt.php on line 21
+[25-Jan-2023 10:16:30 Asia/Bangkok] PHP Warning:  Undefined array key "projid" in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/invoice_rcpt.php on line 21
+[25-Jan-2023 10:17:34 Asia/Bangkok] PHP Warning:  Undefined array key "projid" in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/invoice_rcpt.php on line 21
+[25-Jan-2023 10:17:45 Asia/Bangkok] PHP Warning:  Undefined array key "projid" in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/invoice_rcpt.php on line 21
+[25-Jan-2023 10:17:47 Asia/Bangkok] PHP Warning:  Undefined array key "projid" in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/invoice_rcpt.php on line 21
+[25-Jan-2023 11:28:32 Asia/Bangkok] PHP Warning:  Undefined array key "page" in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/fetch_receipt.php on line 8
+[25-Jan-2023 11:34:24 Asia/Bangkok] PHP Warning:  Undefined array key "page" in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/fetch_receipt.php on line 9
+[25-Jan-2023 11:34:32 Asia/Bangkok] PHP Warning:  Undefined array key "page" in /home/cp261186/public_html/acs-groups.com/backoffice/acs-accounting-ppe/fetch_receipt.php on line 9

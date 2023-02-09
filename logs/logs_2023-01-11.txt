@@ -1,0 +1,90 @@
+Datetime: 2023-01-11 12:18:31
+IP Address: 58.8.180.230
+User: pinus
+Action: SAVE_INVOICE_APPROVE_MDEP_MULTIDEP_ISMDEP
+Status: S
+Ref: 
+Detail: a:1:{s:6:"detail";s:129:"อนุมัติใบแจ้งหนี้ - รอฝ่ายอนุมัติ (หัวหน้าฝ่าย)";}
+Data GET: a:4:{s:4:"step";s:20:"mdep_multidep_ismdep";s:3:"cid";s:4:"C001";s:3:"dep";s:4:"D003";s:6:"action";s:4:"save";}
+Data POST: 
+-------------------------
+Datetime: 2023-01-11 12:19:46
+IP Address: 58.8.180.230
+User: sureeporn
+Action: SAVE_INVOICE_APPROVE_MGR_MULTIDEP_ISMDEP
+Status: S
+Ref: 
+Detail: a:1:{s:6:"detail";s:120:"อนุมัติใบแจ้งหนี้ - รอตรวจจ่าย (หัวหน้าฝ่าย)";}
+Data GET: a:4:{s:4:"step";s:19:"mgr_multidep_ismdep";s:3:"cid";s:4:"C001";s:3:"dep";s:4:"D003";s:6:"action";s:4:"save";}
+Data POST: 
+-------------------------
+Datetime: 2023-01-11 13:16:32
+IP Address: 49.230.206.184
+User: pinus
+Action: SAVE_INVOICE_APPROVE_MDEP_MULTIDEP_ISMDEP
+Status: S
+Ref: 
+Detail: a:1:{s:6:"detail";s:129:"อนุมัติใบแจ้งหนี้ - รอฝ่ายอนุมัติ (หัวหน้าฝ่าย)";}
+Data GET: a:4:{s:4:"step";s:20:"mdep_multidep_ismdep";s:3:"cid";s:4:"C001";s:3:"dep";s:4:"D003";s:6:"action";s:4:"save";}
+Data POST: 
+-------------------------
+Datetime: 2023-01-11 13:16:52
+IP Address: 49.230.206.184
+User: pinus
+Action: SAVE_INVOICE_APPROVE_MDEP_MULTIDEP_ISMDEP
+Status: S
+Ref: 
+Detail: a:1:{s:6:"detail";s:129:"อนุมัติใบแจ้งหนี้ - รอฝ่ายอนุมัติ (หัวหน้าฝ่าย)";}
+Data GET: a:4:{s:4:"step";s:20:"mdep_multidep_ismdep";s:3:"cid";s:4:"C004";s:3:"dep";s:4:"D025";s:6:"action";s:4:"save";}
+Data POST: 
+-------------------------
+Datetime: 2023-01-11 13:17:57
+IP Address: 49.230.206.184
+User: sureeporn
+Action: SAVE_INVOICE_APPROVE_MGR_MULTIDEP_ISMDEP
+Status: S
+Ref: 
+Detail: a:1:{s:6:"detail";s:120:"อนุมัติใบแจ้งหนี้ - รอตรวจจ่าย (หัวหน้าฝ่าย)";}
+Data GET: a:4:{s:4:"step";s:19:"mgr_multidep_ismdep";s:3:"cid";s:4:"C004";s:3:"dep";s:4:"D025";s:6:"action";s:4:"save";}
+Data POST: 
+-------------------------
+Datetime: 2023-01-11 13:55:56
+IP Address: 1.46.146.231
+User: piyawat
+Action: SAVE_INVOICE_APPROVE_CEO_NODEP
+Status: S
+Ref: 
+Detail: a:1:{s:6:"detail";s:87:"อนุมัติใบแจ้งหนี้ - รอ CEO อนุมัติ ";}
+Data GET: a:4:{s:4:"step";s:9:"ceo_nodep";s:3:"cid";s:4:"C001";s:3:"dep";s:4:"D005";s:6:"action";s:4:"save";}
+Data POST: 
+-------------------------
+Datetime: 2023-01-11 13:56:16
+IP Address: 1.46.146.231
+User: piyawat
+Action: SAVE_INVOICE_APPROVE_CEO_NODEP
+Status: S
+Ref: 
+Detail: a:1:{s:6:"detail";s:87:"อนุมัติใบแจ้งหนี้ - รอ CEO อนุมัติ ";}
+Data GET: a:4:{s:4:"step";s:9:"ceo_nodep";s:3:"cid";s:4:"C001";s:3:"dep";s:4:"D005";s:6:"action";s:4:"save";}
+Data POST: 
+-------------------------
+Datetime: 2023-01-11 13:56:57
+IP Address: 1.46.146.231
+User: piyawat
+Action: SAVE_INVOICE_APPROVE_CEO_NODEP
+Status: S
+Ref: 
+Detail: a:1:{s:6:"detail";s:87:"อนุมัติใบแจ้งหนี้ - รอ CEO อนุมัติ ";}
+Data GET: a:4:{s:4:"step";s:9:"ceo_nodep";s:3:"cid";s:4:"C001";s:3:"dep";s:4:"D003";s:6:"action";s:4:"save";}
+Data POST: 
+-------------------------
+Datetime: 2023-01-11 13:57:05
+IP Address: 1.46.146.231
+User: piyawat
+Action: SAVE_INVOICE_APPROVE_CEO_NODEP
+Status: S
+Ref: 
+Detail: a:1:{s:6:"detail";s:87:"อนุมัติใบแจ้งหนี้ - รอ CEO อนุมัติ ";}
+Data GET: a:4:{s:4:"step";s:9:"ceo_nodep";s:3:"cid";s:4:"C001";s:3:"dep";s:4:"D003";s:6:"action";s:4:"save";}
+Data POST: 
+-------------------------

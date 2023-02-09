@@ -1,0 +1,234 @@
+		.checkbox {
+			width: 100%;
+			margin: 5px auto;
+			position: relative;
+			display: inline;
+		}
+		.checkbox label {
+			position: relative;
+			min-height: 34px;
+			display: block;
+			padding-left: 40px;
+			margin-bottom: 0;
+			font-weight: normal;
+			cursor: pointer;
+		}
+		.checkbox label span {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			font-weight: 700;
+		}
+		.checkbox label:before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			margin: 4px;
+			width: 22px;
+			height: 22px;
+			transition: transform 0.28s ease;
+			border-radius: 3px;
+			border: 2px solid #34c37a;
+			background-color: #FFFFFF;
+		}
+		.checkbox label:after {
+			content: "";
+			display: block;
+			width: 10px;
+			height: 5px;
+			border-bottom: 2px solid #34c37a;
+			border-left: 2px solid #34c37a;
+			transform: rotate(-45deg) scale(0);
+			transition: transform ease 0.25s;
+			position: absolute;
+			top: 12px;
+			left: 10px;
+		}
+		.checkbox input[type=radio] {
+			width: auto;
+			opacity: 1e-8;
+			position: absolute;
+			left: 0;
+			margin-left: -20px;
+		}
+		.checkbox input[type=radio]:checked ~ label:before {
+			border: 2px solid #34c37a;
+		}
+		.checkbox input[type=radio]:checked ~ label:after {
+			transform: rotate(-45deg) scale(1);
+		}
+		.checkbox input[type=radio]:focus + label::before {
+			outline: 0;
+		}
+		.checkbox input[type=checkbox] {
+			width: auto;
+			opacity: 1e-8;
+			position: absolute;
+			left: 0;
+			margin-left: -20px;
+		}
+		.checkbox input[type=checkbox]:checked ~ label:before {
+			border: 2px solid #34c37a;
+		}
+		.checkbox input[type=checkbox]:checked ~ label:after {
+			transform: rotate(-45deg) scale(1);
+		}
+		.checkbox input[type=checkbox]:focus + label::before {
+			outline: 0;
+		}
+
+
+		/* The container */
+		.container-chk {
+			display: block;
+			position: relative;
+			padding-left: 1.25rem;
+			margin-bottom: 1.55rem;
+			margin-left: 0.16rem;
+			cursor: pointer;
+			font-size: 1.5rem;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+		/* Hide the browser's default checkbox */
+		.container-chk input {
+			position: absolute;
+			opacity: 0;
+			cursor: pointer;
+			height: 0;
+			width: 0;
+		}
+		.container-checkbox input[type=checkbox] {
+			display: none;
+		}
+		/* Create a custom checkbox */
+		.checkmark {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 1.5625rem;
+			width: 1.5625rem;
+			/*background-color: #ccc;*/
+			background-color: transparent;
+			width: 100%;
+			height: 100%;
+			cursor: pointer;
+		}
+		/* On mouse-over, add a grey background color */
+		.container-chk:hover input ~ .checkmark {
+			background-color: #ddd;
+		}
+		/* When the checkbox is checked, add a blue background */
+		.container-chk input:checked ~ .checkmark {
+			background-color: #2196F3;
+		}
+		/* Create the checkmark/indicator (hidden when not checked) */
+		.checkmark:after {
+			content: "";
+			position: absolute;
+			display: none;
+		}
+		/* Show the checkmark when checked */
+		.container-chk input:checked ~ .checkmark:after {
+			display: block;
+		}
+		/* Style the checkmark/indicator */
+		.container-chk .checkmark:after {
+			left: 10px;
+			top: 7px;
+			width: 5px;
+			height: 10px;
+			border: solid white;
+			border-width: 0 3px 3px 0;
+			-webkit-transform: rotate(45deg);
+				-ms-transform: rotate(45deg);
+					transform: rotate(45deg);
+		}
+
+
+
+
+
+
+		.checkbox_blue {
+			width: 100%;
+			margin: 5px auto;
+			position: relative;
+			display: inline;
+		}
+		.checkbox_blue label {
+			position: relative;
+			min-height: 34px;
+			display: block;
+			padding-left: 40px;
+			margin-bottom: 0;
+			font-weight: normal;
+			cursor: pointer;
+		}
+		.checkbox_blue label span {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			font-weight: 700;
+		}
+		.checkbox_blue label:before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			margin: 4px;
+			width: 22px;
+			height: 22px;
+			transition: transform 0.28s ease;
+			border-radius: 3px;
+			border: 2px solid #0000FF;
+			background-color: #FFFFFF;
+		}
+		.checkbox_blue label:after {
+			content: "";
+			display: block;
+			width: 10px;
+			height: 5px;
+			border-bottom: 2px solid #0000FF;
+			border-left: 2px solid #0000FF;
+			transform: rotate(-45deg) scale(0);
+			transition: transform ease 0.25s;
+			position: absolute;
+			top: 12px;
+			left: 10px;
+		}
+		.checkbox_blue input[type=radio] {
+			width: auto;
+			opacity: 1e-8;
+			position: absolute;
+			left: 0;
+			margin-left: -20px;
+		}
+		.checkbox_blue input[type=radio]:checked ~ label:before {
+			border: 2px solid #0000FF;
+		}
+		.checkbox_blue input[type=radio]:checked ~ label:after {
+			transform: rotate(-45deg) scale(1);
+		}
+		.checkbox_blue input[type=radio]:focus + label::before {
+			outline: 0;
+		}
+		.checkbox_blue input[type=checkbox] {
+			width: auto;
+			opacity: 1e-8;
+			position: absolute;
+			left: 0;
+			margin-left: -20px;
+		}
+		.checkbox_blue input[type=checkbox]:checked ~ label:before {
+			border: 2px solid #0000FF;
+		}
+		.checkbox_blue input[type=checkbox]:checked ~ label:after {
+			transform: rotate(-45deg) scale(1);
+		}
+		.checkbox_blue input[type=checkbox]:focus + label::before {
+			outline: 0;
+		}

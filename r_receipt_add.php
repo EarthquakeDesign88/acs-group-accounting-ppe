@@ -1,0 +1,583 @@
+<?php 
+	
+	header('Content-Type: application/json');
+	session_start();
+	if (!$_SESSION["user_name"]) {  //check session
+
+		Header("Location: login.php"); //ไม่พบผู้ใช้กระโดดกลับไปหน้า login form
+
+	} else {
+
+		if(!empty($_POST)) {
+
+			include 'connect.php';
+
+			if(isset($_POST["page_status"])){
+				$page = $_POST["page_status"];
+			}
+
+			if(isset($_POST["Redate"])) {
+				$Redate = $_POST["Redate"];
+			} else {
+				$Redate = '0000-00-00';
+			}		
+
+			if(isset($_POST["outputTax"])) {
+				$outputTax = $_POST["outputTax"];
+			} else {
+				$outputTax = '';
+			}
+
+			if(isset($_POST["ReNote"])) {
+				$ReNote = $_POST["ReNote"];
+			} else {
+				$ReNote = '';
+			}
+
+			if(isset($_POST["compid"])) {
+				$compid = $_POST["compid"];
+			} else {
+				$compid = '';
+			}
+
+			if(isset($_POST["custid"])) {
+				$custid = $_POST["custid"];
+			} else {
+				$custid = '';
+			}
+			
+			if(isset($_POST["depid"])) {
+				$depid = $_POST["depid"];
+			} else {
+				$depid = '';
+			}
+
+			$str_sql_dep = "SELECT * FROM department_tb WHERE dep_id = '". $depid ."'";
+			$obj_rs_dep = mysqli_query($obj_con, $str_sql_dep);
+			$obj_row_dep = mysqli_fetch_array($obj_rs_dep);
+
+			$depname = $obj_row_dep["dep_name"];
+			$depcode = $obj_row_dep["dep_code"];
+
+			$yearTH = date("Y")+543;
+			$month = $_POST["SelMonth"];
+
+			$strYear = substr($Redate,0,4);
+			$strYearTH = $strYear + 543;
+			// echo $strYearTH;
+
+			if(isset($_POST["BackVal"])) {
+				$BackVal = $_POST["BackVal"];
+			} else {
+				$BackVal = "";
+			}
+
+			if (isset($_POST["SelYear"])) {
+				$SelYear = $_POST["SelYear"];
+			} else {
+				$SelYear = '';
+			}
+
+			if (isset($_POST["SelReYear"])) {
+				$SelReYear = $_POST["SelReYear"];
+			} else {
+				$SelReYear = '';
+			}
+
+			// echo $SelReYear;
+
+			if($compid == 'C001' || $compid == 'C004' || $compid == 'C008' || $compid == 'C009' || $compid == 'C010' || $compid == 'C011' || $compid == 'C014' || $compid == 'C015' || $compid == 'C016') {
+
+				if($BackVal == 1) {
+					$year = substr(date("Y")+543,-2);
+					$str_sql_re = "SELECT MAX(re_no) AS last_id FROM receipt_tb WHERE re_month = '". $month ."' AND re_depid = '". $depid ."' AND re_year = '". $SelReYear ."'";
+					$obj_rs_re = mysqli_query($obj_con, $str_sql_re);
+					$obj_row_re = mysqli_fetch_array($obj_rs_re);
+					$maxId = substr($obj_row_re['last_id'], -4);
+					if ($maxId== "") {
+						$maxId = "0001";
+					} else {
+						$maxId = ($maxId + 1);
+						$maxId = substr("0000".$maxId, -4);
+					}
+
+					if($compid == 'C001' || $compid == 'C014') {
+						$nextReno = $SelYear.$month.$maxId;
+					} else {
+						$nextReno = $depname.$SelYear.$month.$maxId;
+					}
+				} else {
+					if(isset($_POST["Reno"])) {
+						if($compid == 'C001' || $compid == 'C014') {
+							$nextReno = $_POST["Reno"];
+						} else {
+							$nextReno = $depname.$_POST["Reno"];
+						}
+					} else {
+						$nextReno = '';
+					}
+				}
+				
+			}
+			// } else if ($compid == 'C010') {
+
+			// 	//----- ธรรมพิพัฒน์ -----//
+			// 	$str_sql_book = "SELECT MAX(re_bookno) AS re_bookno FROM receipt_tb WHERE re_depid = '". $depid ."'";
+			// 	$obj_rs_book = mysqli_query($obj_con, $str_sql_book);
+			// 	$obj_row_book = mysqli_fetch_array($obj_rs_book);
+
+			// 	$book = $obj_row_book["re_bookno"];
+
+			// 	$str_sql_bn = "SELECT * FROM receipt_tb WHERE re_depid = '". $depid ."' AND re_bookno = '". $book ."'";
+			// 	$obj_rs_bn = mysqli_query($obj_con, $str_sql_bn);
+			// 	$obj_row_bn = mysqli_fetch_array($obj_rs_bn);
+
+			// 	$str_sql_reno = "SELECT MAX(re_no) AS re_no FROM receipt_tb WHERE re_depid = '". $depid ."'";
+			// 	$obj_rs_reno = mysqli_query($obj_con, $str_sql_reno);
+			// 	$obj_row_reno = mysqli_fetch_array($obj_rs_reno);
+			// 	$IDTPPT = substr($obj_row_reno['re_no'], -2);
+
+			// 	if($IDTPPT > 50) {
+			// 		$bookNew = $obj_row_bn["re_bookno"] + 1;
+
+			// 		$noOld = $obj_row_reno["re_no"];
+			// 		$noNew = $obj_row_reno["re_no"] + 1;
+			// 	} else {
+			// 		$bookNew = $obj_row_bn["re_bookno"];
+
+			// 		$noOld = $obj_row_reno["re_no"];
+			// 		$noNew = $obj_row_reno["re_no"] + 1;
+			// 	}
+
+			// 	$depcode = $bookNew;
+			// 	$nextReno = $noNew;
+
+			// } else if ($compid == 'C011') {
+
+			// 	//----- รัชโยธิน -----//
+			// 	$str_sql_re = "SELECT MAX(re_no) AS last_id FROM receipt_tb WHERE re_depid = '". $depid ."'";
+			// 	$obj_rs_re = mysqli_query($obj_con, $str_sql_re);
+			// 	$obj_row_re = mysqli_fetch_array($obj_rs_re);
+			// 	$maxId = substr($obj_row_re['last_id'], -5);
+			// 	if ($maxId== "") {
+			// 		$maxId = "00001";
+			// 	} else {
+			// 		$maxId = ($maxId + 1);
+			// 		$maxId = substr("00000".$maxId, -5);
+			// 	}
+			// 	$nextReno = "AC".$maxId;
+
+			// }
+
+			if(isset($_POST["bySelPay"])) {
+				$bySelPay = $_POST["bySelPay"];
+			} else {
+				$bySelPay = '';
+			}
+
+			if(isset($_POST["chequeNo"])) {
+				$chequeNo = $_POST["chequeNo"];
+			} else {
+				$chequeNo = '';
+			}
+
+			if(isset($_POST["SelBank"])) {
+				$SelBank = $_POST["SelBank"];
+			} else {
+				$SelBank = '';
+			}
+
+			if(isset($_POST["SelBranch"])) {
+				$SelBranch = $_POST["SelBranch"];
+			} else {
+				$SelBranch = '';
+			}
+
+			// echo $SelBranch;
+
+			if(isset($_POST["chequeDate"])) {
+				if($_POST["chequeDate"] != NULL) {
+					$chequeDate = $_POST["chequeDate"];
+				} else {
+					$chequeDate = '0000-00-00';
+				}
+			}
+
+			if(isset($_POST["useridCreate"])) {
+				$useridCreate = $_POST["useridCreate"];
+			} else {
+				$useridCreate = '';
+			}
+
+			if(isset($_POST["CreateDate"])) {
+				if($_POST["CreateDate"] == NULL) {
+					$CreateDate = date('Y-m-d H:i:s');
+				} else {
+					$CreateDate = '0000-00-00 00:00:00';
+				}
+			}
+
+			if(isset($_POST["useridEdit"])) {
+				$useridEdit = $_POST["useridEdit"];
+			} else {
+				$useridEdit = '';
+			}
+
+			if(isset($_POST["EditDate"])) {
+				if($_POST["EditDate"] == NULL) {
+					$EditDate = '0000-00-00 00:00:00';
+				} else {
+					$EditDate = $_POST["EditDate"];
+				}
+			}
+
+			if(isset($_POST["irID"])) {
+				$irID = $_POST["irID"];
+			} else {
+				$irID = '';
+			}
+
+			if(isset($_POST["invredesc1"])) {
+				$invredesc1 = $_POST["invredesc1"];
+			} else {
+				$invredesc1 = '';
+			}
+
+			if(isset($_POST["invredesc2"])) {
+				$invredesc2 = $_POST["invredesc2"];
+			} else {
+				$invredesc2 = '';
+			}
+
+			if(isset($_POST["invredesc3"])) {
+				$invredesc3 = $_POST["invredesc3"];
+			} else {
+				$invredesc3 = '';
+			}
+			if(isset($_POST["invredesc4"])) {
+				$invredesc4 = $_POST["invredesc4"];
+			} else {
+				$invredesc4 = '';
+			}
+
+			if(isset($_POST["invredesc5"])) {
+				$invredesc5 = $_POST["invredesc5"];
+			} else {
+				$invredesc5 = '';
+			}
+
+			if(isset($_POST["invredesc6"])) {
+				$invredesc6 = $_POST["invredesc6"];
+			} else {
+				$invredesc6 = '';
+			}
+
+			if(isset($_POST["invredesc7"])) {
+				$invredesc7 = $_POST["invredesc7"];
+			} else {
+				$invredesc7 = '';
+			}
+
+			if(isset($_POST["invredesc8"])) {
+				$invredesc8 = $_POST["invredesc8"];
+			} else {
+				$invredesc8 = '';
+			}
+			
+
+			if(isset($_POST["amountHidden1"])) {
+				$amountHidden1 = $_POST["amountHidden1"];
+			} else {
+				$amountHidden1 = '0.00';
+			}
+
+			if(isset($_POST["amountHidden2"])) {
+				$amountHidden2 = $_POST["amountHidden2"];
+			} else {
+				$amountHidden2 = '0.00';
+			}
+
+			if(isset($_POST["amountHidden3"])) {
+				$amountHidden3 = $_POST["amountHidden3"];
+			} else {
+				$amountHidden3 = '0.00';
+			}
+
+			if(isset($_POST["amountHidden4"])) {
+				$amountHidden4 = $_POST["amountHidden4"];
+			} else {
+				$amountHidden4 = '0.00';
+			}
+
+			if(isset($_POST["amountHidden5"])) {
+				$amountHidden5 = $_POST["amountHidden5"];
+			} else {
+				$amountHidden5 = '0.00';
+			}
+
+			if(isset($_POST["amountHidden6"])) {
+				$amountHidden6 = $_POST["amountHidden6"];
+			} else {
+				$amountHidden6 = '0.00';
+			}
+
+			if(isset($_POST["amountHidden7"])) {
+				$amountHidden7 = $_POST["amountHidden7"];
+			} else {
+				$amountHidden7 = '0.00';
+			}
+
+			if(isset($_POST["amountHidden8"])) {
+				$amountHidden8 = $_POST["amountHidden8"];
+			} else {
+				$amountHidden8 = '0.00';
+			}
+
+			if(isset($_POST["subtotalHidden"])) {
+				$subtotalHidden = $_POST["subtotalHidden"];
+			} else {
+				$subtotalHidden = '0.00';
+			}
+
+			if(isset($_POST["vatpercentHidden"])) {
+				$vatpercentHidden = $_POST["vatpercentHidden"];
+			} else {
+				$vatpercentHidden = '0.00';
+			}
+
+			if(isset($_POST["vatHidden"])) {
+				$vatHidden = $_POST["vatHidden"] - $_POST["DiffVatHidden"];
+			} else {
+				$vatHidden = '0.00';
+			}
+
+			if(isset($_POST["DiffVatHidden"])) {
+				if($_POST["DiffVatHidden"] == '0') {
+					$DiffVatHidden = '0.00';
+				} else {
+					$DiffVatHidden = $_POST["DiffVatHidden"];
+				}
+			} else {
+				$DiffVatHidden = '0.00';
+			}
+
+			if(isset($_POST["grandtotalHidden"])) {
+				$grandtotalHidden = $_POST["grandtotalHidden"] - $_POST["DiffVatHidden"] - $_POST["DiffGrandHidden"];
+			} else {
+				$grandtotalHidden = '0.00';
+			}
+
+			if(isset($_POST["DiffGrandHidden"])) {
+				if($_POST["DiffGrandHidden"] == '0') {
+					$DiffGrandHidden = '0.00';
+				} else {
+					$DiffGrandHidden = $_POST["DiffGrandHidden"];
+				}
+			} else {
+				$DiffGrandHidden = '0.00';
+			}
+
+			if(isset($_POST["projid"])) {
+				$projid = $_POST["projid"];
+			} else {
+				$projid = '';
+			}
+
+			if(isset($_POST["invresubdesc1"])) {
+				$invresubdesc1 = $_POST["invresubdesc1"];
+			} else {
+				$invresubdesc1 = '';
+			}
+
+			if(isset($_POST["invresubdesc2"])) {
+				$invresubdesc2 = $_POST["invresubdesc2"];
+			} else {
+				$invresubdesc2 = '';
+			}
+
+			if(isset($_POST["invresubdescHidden3"])) {
+				$invresubdescHidden3 = $_POST["invresubdescHidden3"];
+			} else {
+				$invresubdescHidden3 = '0.00';
+			}
+
+			if(isset($_POST["invresubdescHidden4"])) {
+				$invresubdescHidden4 = $_POST["invresubdescHidden4"];
+			} else {
+				$invresubdescHidden4 = '0.00';
+			}
+
+			if(isset($_POST["invresubdescHidden5"])) {
+				$invresubdescHidden5 = $_POST["invresubdescHidden5"];
+			} else {
+				$invresubdescHidden5 = '0.00';
+			}
+
+			if(isset($_POST["invresubdescHidden6"])) {
+				$invresubdescHidden6 = $_POST["invresubdescHidden6"];
+			} else {
+				$invresubdescHidden6 = '0.00';
+			}
+
+			if(isset($_POST["invresubdescHidden7"])) {
+				$invresubdescHidden7 = $_POST["invresubdescHidden7"];
+			} else {
+				$invresubdescHidden7 = '0.00';
+			}
+
+			if(isset($_POST["invresubdescHidden8"])) {
+				$invresubdescHidden8 = $_POST["invresubdescHidden8"];
+			} else {
+				$invresubdescHidden8 = '0.00';
+			}
+
+			if(isset($_POST["invresubdescHidden9"])) {
+				$invresubdescHidden9 = $_POST["invresubdescHidden9"];
+			} else {
+				$invresubdescHidden9 = '0.00';
+			}
+
+			// if ($compid == 'C009') {
+			// 	$refinvrcpt = '2';
+			// } else if ($compid == 'C001' || $compid == 'C004' || $compid == 'C014' || $compid == 'C015') {
+			// 	$refinvrcpt = '1';
+			// } else {
+			// 	$refinvrcpt = '0';
+			// }
+
+			if($irID == '') {
+				$refinvrcpt = '1';
+			} else {
+				$refinvrcpt = '0';
+			}
+
+			if($compid == 'C011') {
+				$RefinvrcptNo = $_POST["invNo"];
+			} else {
+				$RefinvrcptNo = '';
+			}
+
+			$str_sql = "INSERT INTO receipt_tb (re_bookno, re_no, re_date, re_refinvrcpt, re_compid, re_custid, re_depid, re_outputtax, re_description1, re_description2, re_description3, re_description4, re_description5, re_description6, re_description7, re_description8, re_sub_description1, re_sub_description2, re_sub_description3, re_sub_description4, re_sub_description5, re_sub_description6, re_sub_description7, re_sub_description8, re_sub_description9, re_amount1, re_amount2, re_amount3, re_amount4, re_amount5, re_amount6, re_amount7, re_amount8, re_subtotal, re_vatpercent, re_vat, re_differencevat, re_grandtotal, re_differencegrandtotal, re_note, re_invrcptNo_RPEC, re_typepay, re_chequeno, re_bankid, re_branchid, re_chequedate, re_year, re_month, re_file, re_stsid, re_userid_create, re_createdate, re_userid_edit, re_editdate, re_invrcpt_id) VALUES (";
+			$str_sql .= "'" . $depcode . "',";
+			$str_sql .= "'" . $nextReno . "',";
+			$str_sql .= "'" . $Redate . "',";
+			$str_sql .= "'" . $refinvrcpt . "',";
+			$str_sql .= "'" . $compid  . "',";
+			$str_sql .= "'" . $custid . "',";
+			$str_sql .= "'" . $depid . "',";
+			$str_sql .= "'" . $outputTax . "',";
+			// if($irID == '') {
+				$str_sql .= "'" . $invredesc1 . "',";
+				$str_sql .= "'" . $invredesc2 . "',";
+				$str_sql .= "'" . $invredesc3 . "',";
+				$str_sql .= "'" . $invredesc4 . "',";
+				$str_sql .= "'" . $invredesc5 . "',";
+				$str_sql .= "'" . $invredesc6 . "',";
+				$str_sql .= "'" . $invredesc7 . "',";
+				$str_sql .= "'" . $invredesc8 . "',";
+			// } else {
+			// 	$str_sql .= "'',";
+			// 	$str_sql .= "'',";
+			// 	$str_sql .= "'',";
+			// 	$str_sql .= "'',";
+			// 	$str_sql .= "'',";
+			// 	$str_sql .= "'',";
+			// 	$str_sql .= "'',";
+			// 	$str_sql .= "'',";
+			// }
+			$str_sql .= "'" . $invresubdesc1 . "',";
+			$str_sql .= "'" . $invresubdesc2 . "',";
+			$str_sql .= "'" . $invresubdescHidden3 . "',";
+			$str_sql .= "'" . $invresubdescHidden4 . "',";
+			$str_sql .= "'" . $invresubdescHidden5 . "',";
+			$str_sql .= "'" . $invresubdescHidden6 . "',";
+			$str_sql .= "'" . $invresubdescHidden7 . "',";
+			$str_sql .= "'" . $invresubdescHidden8 . "',";
+			$str_sql .= "'" . $invresubdescHidden9 . "',";
+			$str_sql .= "'" . $amountHidden1 . "',";
+			$str_sql .= "'" . $amountHidden2 . "',";
+			$str_sql .= "'" . $amountHidden3 . "',";
+			$str_sql .= "'" . $amountHidden4 . "',";
+			$str_sql .= "'" . $amountHidden5 . "',";
+			$str_sql .= "'" . $amountHidden6 . "',";
+			$str_sql .= "'" . $amountHidden7 . "',";
+			$str_sql .= "'" . $amountHidden8 . "',";
+			$str_sql .= "'" . $subtotalHidden . "',";
+			$str_sql .= "'" . $vatpercentHidden . "',";
+			$str_sql .= "'" . $vatHidden . "',";
+			$str_sql .= "'" . $DiffVatHidden . "',";
+			$str_sql .= "'" . $grandtotalHidden . "',";
+			$str_sql .= "'" . $DiffGrandHidden . "',";
+			$str_sql .= "'" . $ReNote . "',";
+			$str_sql .= "'" . $RefinvrcptNo . "',";
+			$str_sql .= "'" . $bySelPay . "',";
+			$str_sql .= "'" . $chequeNo . "',";
+			$str_sql .= "'" . $SelBank . "',";
+			$str_sql .= "'" . $SelBranch . "',";
+			$str_sql .= "'" . $chequeDate . "',";
+			$str_sql .= "'" . $SelReYear . "',";
+			$str_sql .= "'" . $_POST["SelMonth"] . "',";
+			$str_sql .= "'',";
+			$str_sql .= "'STS002',";
+			$str_sql .= "'" . $useridCreate . "',";
+			$str_sql .= "'" . $CreateDate . "',";
+			$str_sql .= "'" . $useridEdit . "',";
+			$str_sql .= "'" . $EditDate . "',";
+			$str_sql .= "'" . $irID . "')";
+			$query = mysqli_query($obj_con, $str_sql) or die ("Error in query: $str_sql " . mysqli_error($obj_con));
+
+			// echo $str_sql;
+
+			$str_sql_id = "SELECT MAX(re_id) AS re_id FROM receipt_tb WHERE re_depid = '". $depid ."' ORDER BY re_id";
+			$obj_rs_id = mysqli_query($obj_con, $str_sql_id);
+			$obj_row_id = mysqli_fetch_array($obj_rs_id);
+
+			$Reid = $obj_row_id["re_id"];
+
+			// echo $str_sql_id;
+
+			if(isset($_POST["invResubtotalHidden"])) {
+				$invResubtotalHidden = $_POST["invResubtotalHidden"];
+			} else {
+				$invResubtotalHidden = '0.00';
+			}
+        
+			if(number_format($_POST["invrcpt_balancetotal"], 2) == number_format($subtotalHidden, 2)) {
+
+				$str_sql_upinv = "UPDATE invoice_rcpt_tb SET 
+				invrcpt_balancetotal = '0.00',
+				invrcpt_stsid = 'STS002', /* จ่ายแล้ว */
+				invrcpt_reid = '$Reid'
+				WHERE invrcpt_id = '$irID'";
+
+			} else {
+
+				$balance = $_POST["invrcpt_balancetotal"] - $subtotalHidden;
+
+				$balanceTotal = number_format($balance, 2, '.', '');
+
+				$str_sql_upinv = "UPDATE invoice_rcpt_tb SET 
+				invrcpt_balancetotal = '$balanceTotal',
+				invrcpt_stsid = 'STS001', /* ค้างจ่าย */
+				invrcpt_reid = '$Reid'
+				WHERE invrcpt_id = '$irID'";
+
+			}
+			$result_upiv = mysqli_query($obj_con, $str_sql_upinv);
+
+
+			if ($query) {
+
+				echo json_encode(array('status'=>1,'cid'=> $compid,'dep'=>$depid, 'message'=>$nextReno));
+
+			} else {
+
+				echo json_encode(array('status' => '0','message'=> $str_sql));
+
+			}
+			
+		}
+
+	}
+
+?>

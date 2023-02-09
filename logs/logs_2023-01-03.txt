@@ -1,0 +1,20 @@
+Datetime: 2023-01-03 13:07:42
+IP Address: 58.8.175.63
+User: sureeporn
+Action: SAVE_INVOICE_APPROVE_MGR_MULTIDEP_ISMDEP
+Status: S
+Ref: 
+Detail: a:1:{s:6:"detail";s:120:"อนุมัติใบแจ้งหนี้ - รอตรวจจ่าย (หัวหน้าฝ่าย)";}
+Data GET: a:4:{s:4:"step";s:19:"mgr_multidep_ismdep";s:3:"cid";s:4:"C001";s:3:"dep";s:4:"D003";s:6:"action";s:4:"save";}
+Data POST: 
+-------------------------
+Datetime: 2023-01-03 14:40:35
+IP Address: 58.8.175.63
+User: sureeporn
+Action: SAVE_INVOICE_APPROVE_MGR_NODEP
+Status: S
+Ref: 
+Detail: a:1:{s:6:"detail";s:85:"อนุมัติใบแจ้งหนี้ - รอตรวจจ่าย ";}
+Data GET: a:4:{s:4:"step";s:9:"mgr_nodep";s:3:"cid";s:4:"C005";s:3:"dep";s:4:"D015";s:6:"action";s:4:"save";}
+Data POST: 
+-------------------------

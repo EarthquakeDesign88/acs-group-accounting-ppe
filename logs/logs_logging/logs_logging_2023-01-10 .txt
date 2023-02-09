@@ -1,0 +1,77 @@
+Datetime: 2023-01-10 08:26:01
+IP Address: 58.8.176.123
+Action: login
+Status: S
+Status Message: Success
+Username: AD59013
+Password: Y2pKNU1qazBlREk0TkRnMA==
+-------------------------
+Datetime: 2023-01-10 09:37:37
+IP Address: 58.8.176.123
+Action: login
+Status: S
+Status Message: Success
+Username: sureeporn
+Password: WnpSeE5IZzFiRFJyTldvMWNqUjZOWGsxZGpKMk1qRXo=
+-------------------------
+Datetime: 2023-01-10 14:14:41
+IP Address: 58.8.181.186
+Action: login
+Status: S
+Status Message: Success
+Username: sureeporn
+Password: WnpSeE5IZzFiRFJyTldvMWNqUjZOWGsxZGpKMk1qRXo=
+-------------------------
+Datetime: 2023-01-10 14:19:39
+IP Address: 58.8.181.186
+Action: login
+Status: S
+Status Message: Success
+Username: pannee
+Password: YVRRNU5IYzFhalJyTldvMWVUSTBORGcwZFRJPQ==
+-------------------------
+Datetime: 2023-01-10 14:45:02
+IP Address: 58.8.181.186
+Action: login
+Status: S
+Status Message: Success
+Username: AD59013
+Password: Y2pKNU1qazBlREk0TkRnMA==
+-------------------------
+Datetime: 2023-01-10 14:45:38
+IP Address: 119.76.33.133
+Action: login
+Status: S
+Status Message: Success
+Username: sureeporn
+Password: WnpSeE5IZzFiRFJyTldvMWNqUjZOWGsxZGpKMk1qRXo=
+-------------------------
+Datetime: 2023-01-10 14:50:31
+IP Address: 58.8.181.186
+Action: logout
+Username: pannee
+-------------------------
+Datetime: 2023-01-10 16:02:33
+IP Address: 119.76.33.133
+Action: login
+Status: F
+Status Message: รหัสผ่านไม่ถูกต้อง
+Username: sureeporn
+Password: YkRSME5EQTJZVFJyTlhVMWJ6UjNOWFEx
+-------------------------
+Datetime: 2023-01-10 16:02:47
+IP Address: 119.76.33.133
+Action: login
+Status: F
+Status Message: รหัสผ่านไม่ถูกต้อง
+Username: sureeporn
+Password: YkRSME5EQTJZVFJyTlhVMWJ6UjNOWFEx
+-------------------------
+Datetime: 2023-01-10 16:03:15
+IP Address: 119.76.33.133
+Action: login
+Status: S
+Status Message: Success
+Username: sureeporn
+Password: WnpSeE5IZzFiRFJyTldvMWNqUjZOWGsxZGpKMk1qRXo=
+-------------------------

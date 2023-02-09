@@ -1,0 +1,110 @@
+Datetime: 2023-01-26 10:11:34
+IP Address: 58.8.174.215
+User: sureeporn
+Action: SAVE_PAYMENT_EDIT
+Status: S
+Ref: 
+Detail: a:1:{s:6:"detail";s:73:"แก้ไขใบสำคัญจ่าย เลขที่ error";}
+Data GET: a:3:{s:3:"cid";s:4:"C001";s:3:"dep";s:4:"D003";s:6:"action";s:9:"save_edit";}
+Data POST: a:9:{s:7:"paym_id";s:4:"2529";s:7:"depname";s:2:"CM";s:10:"paymstatus";s:24:"ค้างจ่าย";s:12:"paym_typepay";s:1:"2";s:7:"cheq_no";s:30:"เลขที่เช็ค";s:9:"cheq_date";s:10:"2023-01-27";s:11:"cheq_bankid";s:4:"B019";s:6:"inv_id";a:1:{i:3291;s:5:" 3291";}s:9:"paym_note";s:0:"";}
+-------------------------
+Datetime: 2023-01-26 12:23:32
+IP Address: 58.8.174.215
+User: sureeporn
+Action: SAVE_PAYMENT_EDIT
+Status: S
+Ref: 
+Detail: a:1:{s:6:"detail";s:77:"แก้ไขใบสำคัญจ่าย เลขที่ CM6601019";}
+Data GET: a:3:{s:3:"cid";s:4:"C001";s:3:"dep";s:4:"D003";s:6:"action";s:9:"save_edit";}
+Data POST: a:9:{s:7:"paym_id";s:4:"2507";s:7:"depname";s:2:"CM";s:10:"paymstatus";s:24:"ค้างจ่าย";s:12:"paym_typepay";s:1:"2";s:7:"cheq_no";s:4:"1234";s:9:"cheq_date";s:10:"2023-01-20";s:11:"cheq_bankid";s:4:"B001";s:6:"inv_id";a:1:{i:3309;s:5:" 3309";}s:9:"paym_note";s:0:"";}
+-------------------------
+Datetime: 2023-01-26 12:25:03
+IP Address: 58.8.174.215
+User: sureeporn
+Action: SAVE_PAYMENT_EDIT
+Status: S
+Ref: 
+Detail: a:1:{s:6:"detail";s:77:"แก้ไขใบสำคัญจ่าย เลขที่ CM6601019";}
+Data GET: a:3:{s:3:"cid";s:4:"C001";s:3:"dep";s:4:"D003";s:6:"action";s:9:"save_edit";}
+Data POST: a:9:{s:7:"paym_id";s:4:"2507";s:7:"depname";s:2:"CM";s:10:"paymstatus";s:24:"ค้างจ่าย";s:12:"paym_typepay";s:1:"2";s:7:"cheq_no";s:4:"1234";s:9:"cheq_date";s:10:"2023-01-20";s:11:"cheq_bankid";s:4:"B001";s:6:"inv_id";a:1:{i:3309;s:5:" 3309";}s:9:"paym_note";s:0:"";}
+-------------------------
+Datetime: 2023-01-26 13:14:34
+IP Address: 58.8.174.215
+User: AD59013
+Action: SAVE_PAYMENT_EDIT
+Status: S
+Ref: 
+Detail: a:1:{s:6:"detail";s:77:"แก้ไขใบสำคัญจ่าย เลขที่ CM6601030";}
+Data GET: a:3:{s:3:"cid";s:4:"C001";s:3:"dep";s:4:"D003";s:6:"action";s:9:"save_edit";}
+Data POST: a:9:{s:7:"paym_id";s:4:"2534";s:7:"depname";s:2:"CM";s:10:"paymstatus";s:24:"ค้างจ่าย";s:12:"paym_typepay";s:1:"1";s:7:"cheq_no";s:0:"";s:9:"cheq_date";s:0:"";s:11:"cheq_bankid";s:0:"";s:6:"inv_id";a:1:{i:3308;s:5:" 3308";}s:9:"paym_note";s:0:"";}
+-------------------------
+Datetime: 2023-01-26 13:21:55
+IP Address: 58.8.174.215
+User: sureeporn
+Action: SAVE_PAYMENT_EDIT
+Status: S
+Ref: 
+Detail: a:1:{s:6:"detail";s:77:"แก้ไขใบสำคัญจ่าย เลขที่ AD6601044";}
+Data GET: a:3:{s:3:"cid";s:4:"C001";s:3:"dep";s:4:"D002";s:6:"action";s:9:"save_edit";}
+Data POST: a:9:{s:7:"paym_id";s:4:"2523";s:7:"depname";s:2:"AD";s:10:"paymstatus";s:24:"ค้างจ่าย";s:12:"paym_typepay";s:1:"2";s:7:"cheq_no";s:6:"122366";s:9:"cheq_date";s:10:"2023-01-11";s:11:"cheq_bankid";s:4:"B006";s:6:"inv_id";a:2:{i:3169;s:5:" 3169";i:3307;s:5:" 3307";}s:9:"paym_note";s:0:"";}
+-------------------------
+Datetime: 2023-01-26 13:22:23
+IP Address: 58.8.174.215
+User: sureeporn
+Action: SAVE_PAYMENT_EDIT
+Status: S
+Ref: 
+Detail: a:1:{s:6:"detail";s:77:"แก้ไขใบสำคัญจ่าย เลขที่ AD6601047";}
+Data GET: a:3:{s:3:"cid";s:4:"C001";s:3:"dep";s:4:"D002";s:6:"action";s:9:"save_edit";}
+Data POST: a:9:{s:7:"paym_id";s:4:"2533";s:7:"depname";s:2:"AD";s:10:"paymstatus";s:24:"ค้างจ่าย";s:12:"paym_typepay";s:1:"1";s:7:"cheq_no";s:0:"";s:9:"cheq_date";s:0:"";s:11:"cheq_bankid";s:0:"";s:6:"inv_id";a:1:{i:3167;s:5:" 3167";}s:9:"paym_note";s:0:"";}
+-------------------------
+Datetime: 2023-01-26 13:22:39
+IP Address: 58.8.174.215
+User: sureeporn
+Action: SAVE_PAYMENT_EDIT
+Status: S
+Ref: 
+Detail: a:1:{s:6:"detail";s:77:"แก้ไขใบสำคัญจ่าย เลขที่ AD6601045";}
+Data GET: a:3:{s:3:"cid";s:4:"C001";s:3:"dep";s:4:"D002";s:6:"action";s:9:"save_edit";}
+Data POST: a:9:{s:7:"paym_id";s:4:"2530";s:7:"depname";s:2:"AD";s:10:"paymstatus";s:24:"ค้างจ่าย";s:12:"paym_typepay";s:1:"2";s:7:"cheq_no";s:8:"dfdfdfdf";s:9:"cheq_date";s:10:"2023-01-12";s:11:"cheq_bankid";s:4:"B003";s:6:"inv_id";a:1:{i:3306;s:5:" 3306";}s:9:"paym_note";s:0:"";}
+-------------------------
+Datetime: 2023-01-26 13:54:25
+IP Address: 58.8.174.215
+User: sureeporn
+Action: SAVE_PAYMENT_EDIT
+Status: S
+Ref: 
+Detail: a:1:{s:6:"detail";s:77:"แก้ไขใบสำคัญจ่าย เลขที่ AD6601047";}
+Data GET: a:3:{s:3:"cid";s:4:"C001";s:3:"dep";s:4:"D002";s:6:"action";s:9:"save_edit";}
+Data POST: a:9:{s:7:"paym_id";s:4:"2533";s:7:"depname";s:2:"AD";s:10:"paymstatus";s:24:"ค้างจ่าย";s:12:"paym_typepay";s:1:"2";s:7:"cheq_no";s:6:"cxcxcx";s:9:"cheq_date";s:10:"2023-01-11";s:11:"cheq_bankid";s:4:"B004";s:6:"inv_id";a:1:{i:3167;s:5:" 3167";}s:9:"paym_note";s:0:"";}
+-------------------------
+Datetime: 2023-01-26 13:54:46
+IP Address: 58.8.174.215
+User: sureeporn
+Action: SAVE_PAYMENT_EDIT
+Status: S
+Ref: 
+Detail: a:1:{s:6:"detail";s:77:"แก้ไขใบสำคัญจ่าย เลขที่ AD6601047";}
+Data GET: a:3:{s:3:"cid";s:4:"C001";s:3:"dep";s:4:"D002";s:6:"action";s:9:"save_edit";}
+Data POST: a:9:{s:7:"paym_id";s:4:"2533";s:7:"depname";s:2:"AD";s:10:"paymstatus";s:24:"ค้างจ่าย";s:12:"paym_typepay";s:1:"2";s:7:"cheq_no";s:6:"cxcxcx";s:9:"cheq_date";s:10:"2023-01-11";s:11:"cheq_bankid";s:4:"B004";s:6:"inv_id";a:1:{i:3167;s:5:" 3167";}s:9:"paym_note";s:0:"";}
+-------------------------
+Datetime: 2023-01-26 13:55:10
+IP Address: 58.8.174.215
+User: sureeporn
+Action: SAVE_PAYMENT_EDIT
+Status: S
+Ref: 
+Detail: a:1:{s:6:"detail";s:77:"แก้ไขใบสำคัญจ่าย เลขที่ AD6601047";}
+Data GET: a:3:{s:3:"cid";s:4:"C001";s:3:"dep";s:4:"D002";s:6:"action";s:9:"save_edit";}
+Data POST: a:9:{s:7:"paym_id";s:4:"2533";s:7:"depname";s:2:"AD";s:10:"paymstatus";s:24:"ค้างจ่าย";s:12:"paym_typepay";s:1:"2";s:7:"cheq_no";s:8:"55555555";s:9:"cheq_date";s:10:"2023-01-11";s:11:"cheq_bankid";s:4:"B004";s:6:"inv_id";a:1:{i:3167;s:5:" 3167";}s:9:"paym_note";s:0:"";}
+-------------------------
+Datetime: 2023-01-26 13:57:02
+IP Address: 58.8.174.215
+User: AD59013
+Action: SAVE_PAYMENT_EDIT
+Status: S
+Ref: 
+Detail: a:1:{s:6:"detail";s:77:"แก้ไขใบสำคัญจ่าย เลขที่ CM6601031";}
+Data GET: a:3:{s:3:"cid";s:4:"C001";s:3:"dep";s:4:"D003";s:6:"action";s:9:"save_edit";}
+Data POST: a:9:{s:7:"paym_id";s:4:"2535";s:7:"depname";s:2:"CM";s:10:"paymstatus";s:24:"ค้างจ่าย";s:12:"paym_typepay";s:1:"1";s:7:"cheq_no";s:0:"";s:9:"cheq_date";s:0:"";s:11:"cheq_bankid";s:0:"";s:6:"inv_id";a:1:{i:3288;s:5:" 3288";}s:9:"paym_note";s:0:"";}
+-------------------------

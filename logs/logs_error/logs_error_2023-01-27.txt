@@ -1,0 +1,52 @@
+[27-Jan-2023 16:53:12 Asia/Bangkok] PHP Warning:  Undefined array key "paym_paystatus" in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 24
+[27-Jan-2023 16:53:12 Asia/Bangkok] PHP Warning:  Undefined array key "paym_paystatus" in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 25
+[27-Jan-2023 16:53:12 Asia/Bangkok] PHP Warning:  Undefined variable $inv_id in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 175
+[27-Jan-2023 16:53:12 Asia/Bangkok] PHP Fatal error:  Uncaught TypeError: mysqli_fetch_assoc(): Argument #1 ($result) must be of type mysqli_result, bool given in D:\xampp\htdocs\acs-group-accounting\config\database2.php:33
+Stack trace:
+#0 D:\xampp\htdocs\acs-group-accounting\config\database2.php(33): mysqli_fetch_assoc(false)
+#1 D:\xampp\htdocs\acs-group-accounting\variable_payment.php(176): database->result()
+#2 D:\xampp\htdocs\acs-group-accounting\fetch_payment.php(517): include('D:\\xampp\\htdocs...')
+#3 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\database2.php on line 33
+[27-Jan-2023 16:53:26 Asia/Bangkok] PHP Warning:  Undefined array key "paym_paystatus" in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 24
+[27-Jan-2023 16:53:26 Asia/Bangkok] PHP Warning:  Undefined array key "paym_paystatus" in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 25
+[27-Jan-2023 16:53:26 Asia/Bangkok] PHP Warning:  Undefined variable $inv_id in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 175
+[27-Jan-2023 16:53:26 Asia/Bangkok] PHP Fatal error:  Uncaught TypeError: mysqli_fetch_assoc(): Argument #1 ($result) must be of type mysqli_result, bool given in D:\xampp\htdocs\acs-group-accounting\config\database2.php:33
+Stack trace:
+#0 D:\xampp\htdocs\acs-group-accounting\config\database2.php(33): mysqli_fetch_assoc(false)
+#1 D:\xampp\htdocs\acs-group-accounting\variable_payment.php(176): database->result()
+#2 D:\xampp\htdocs\acs-group-accounting\fetch_payment.php(517): include('D:\\xampp\\htdocs...')
+#3 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\database2.php on line 33
+[27-Jan-2023 16:53:57 Asia/Bangkok] PHP Warning:  Undefined array key "paym_paystatus" in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 24
+[27-Jan-2023 16:53:57 Asia/Bangkok] PHP Warning:  Undefined array key "paym_paystatus" in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 25
+[27-Jan-2023 16:53:57 Asia/Bangkok] PHP Warning:  Undefined variable $inv_id in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 175
+[27-Jan-2023 16:53:57 Asia/Bangkok] PHP Fatal error:  Uncaught TypeError: mysqli_fetch_assoc(): Argument #1 ($result) must be of type mysqli_result, bool given in D:\xampp\htdocs\acs-group-accounting\config\database2.php:33
+Stack trace:
+#0 D:\xampp\htdocs\acs-group-accounting\config\database2.php(33): mysqli_fetch_assoc(false)
+#1 D:\xampp\htdocs\acs-group-accounting\variable_payment.php(176): database->result()
+#2 D:\xampp\htdocs\acs-group-accounting\fetch_payment.php(517): include('D:\\xampp\\htdocs...')
+#3 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\database2.php on line 33
+[27-Jan-2023 16:56:15 Asia/Bangkok] PHP Warning:  Undefined array key "paym_paystatus" in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 24
+[27-Jan-2023 16:56:15 Asia/Bangkok] PHP Warning:  Undefined array key "paym_paystatus" in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 25
+[27-Jan-2023 16:56:15 Asia/Bangkok] PHP Warning:  Undefined array key "paym_paystatus" in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 24
+[27-Jan-2023 16:56:15 Asia/Bangkok] PHP Warning:  Undefined array key "paym_paystatus" in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 25
+[27-Jan-2023 16:56:16 Asia/Bangkok] PHP Warning:  Undefined array key "paym_paystatus" in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 24
+[27-Jan-2023 16:56:16 Asia/Bangkok] PHP Warning:  Undefined array key "paym_paystatus" in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 25
+[27-Jan-2023 16:56:16 Asia/Bangkok] PHP Warning:  Undefined array key "paym_paystatus" in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 24
+[27-Jan-2023 16:56:16 Asia/Bangkok] PHP Warning:  Undefined array key "paym_paystatus" in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 25
+[27-Jan-2023 16:56:16 Asia/Bangkok] PHP Warning:  Undefined array key "paym_paystatus" in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 24
+[27-Jan-2023 16:56:16 Asia/Bangkok] PHP Warning:  Undefined array key "paym_paystatus" in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 25
+[27-Jan-2023 16:56:16 Asia/Bangkok] PHP Warning:  Undefined array key "paym_paystatus" in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 24
+[27-Jan-2023 16:56:16 Asia/Bangkok] PHP Warning:  Undefined array key "paym_paystatus" in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 25
+[27-Jan-2023 16:56:16 Asia/Bangkok] PHP Warning:  Undefined array key "paym_paystatus" in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 24
+[27-Jan-2023 16:56:16 Asia/Bangkok] PHP Warning:  Undefined array key "paym_paystatus" in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 25
+[27-Jan-2023 16:56:16 Asia/Bangkok] PHP Warning:  Undefined array key "paym_paystatus" in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 24
+[27-Jan-2023 16:56:16 Asia/Bangkok] PHP Warning:  Undefined array key "paym_paystatus" in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 25
+[27-Jan-2023 16:56:16 Asia/Bangkok] PHP Warning:  Undefined array key "paym_paystatus" in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 24
+[27-Jan-2023 16:56:16 Asia/Bangkok] PHP Warning:  Undefined array key "paym_paystatus" in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 25
+[27-Jan-2023 16:56:16 Asia/Bangkok] PHP Warning:  Undefined array key "paym_paystatus" in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 24
+[27-Jan-2023 16:56:16 Asia/Bangkok] PHP Warning:  Undefined array key "paym_paystatus" in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 25
+[27-Jan-2023 16:56:20 Asia/Bangkok] PHP Warning:  Undefined array key "paym_paystatus" in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 24
+[27-Jan-2023 16:56:20 Asia/Bangkok] PHP Warning:  Undefined array key "paym_paystatus" in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 25

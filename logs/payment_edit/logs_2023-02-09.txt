@@ -1,0 +1,10 @@
+Datetime: 2023-02-09 10:24:16
+IP Address: 172.70.188.175
+User: ladda
+Action: SAVE_PAYMENT_EDIT
+Status: S
+Ref: 
+Detail: a:1:{s:6:"detail";s:79:"แก้ไขใบสำคัญจ่าย เลขที่ ACSI6602001";}
+Data GET: a:3:{s:3:"cid";s:4:"C014";s:3:"dep";s:4:"D004";s:6:"action";s:9:"save_edit";}
+Data POST: a:9:{s:7:"paym_id";s:4:"2541";s:7:"depname";s:4:"ACSI";s:10:"paymstatus";s:24:"ค้างจ่าย";s:12:"paym_typepay";s:1:"2";s:7:"cheq_no";s:3:"789";s:9:"cheq_date";s:10:"2023-02-09";s:11:"cheq_bankid";s:4:"B001";s:6:"inv_id";a:1:{i:3327;s:5:" 3327";}s:9:"paym_note";s:0:"";}
+-------------------------

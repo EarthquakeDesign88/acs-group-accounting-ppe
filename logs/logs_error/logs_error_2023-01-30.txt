@@ -1,0 +1,450 @@
+[30-Jan-2023 08:44:17 Asia/Bangkok] PHP Fatal error:  Uncaught ValueError: max(): Argument #1 ($value) must contain at least one element in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php:117
+Stack trace:
+#0 D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php(117): max(Array)
+#1 D:\xampp\htdocs\acs-group-accounting\variable_payment.php(58): __invoice_data('', NULL)
+#2 D:\xampp\htdocs\acs-group-accounting\config\function_pdf.php(948): include('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\acs-group-accounting\r_fetch_payment.php(583): __pdf_payment(Array, Array, 'P')
+#4 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 117
+[30-Jan-2023 08:44:28 Asia/Bangkok] PHP Fatal error:  Uncaught ValueError: max(): Argument #1 ($value) must contain at least one element in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php:117
+Stack trace:
+#0 D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php(117): max(Array)
+#1 D:\xampp\htdocs\acs-group-accounting\variable_payment.php(58): __invoice_data('', NULL)
+#2 D:\xampp\htdocs\acs-group-accounting\config\function_pdf.php(948): include('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\acs-group-accounting\r_fetch_payment.php(583): __pdf_payment(Array, Array, 'P')
+#4 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 117
+[30-Jan-2023 08:45:45 Asia/Bangkok] PHP Fatal error:  Uncaught ValueError: max(): Argument #1 ($value) must contain at least one element in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php:117
+Stack trace:
+#0 D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php(117): max(Array)
+#1 D:\xampp\htdocs\acs-group-accounting\variable_payment.php(58): __invoice_data('', NULL)
+#2 D:\xampp\htdocs\acs-group-accounting\config\function_pdf.php(948): include('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\acs-group-accounting\r_fetch_payment.php(583): __pdf_payment(Array, Array, 'P')
+#4 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 117
+[30-Jan-2023 08:48:32 Asia/Bangkok] PHP Fatal error:  Uncaught ValueError: max(): Argument #1 ($value) must contain at least one element in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php:117
+Stack trace:
+#0 D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php(117): max(Array)
+#1 D:\xampp\htdocs\acs-group-accounting\variable_payment.php(58): __invoice_data('', NULL)
+#2 D:\xampp\htdocs\acs-group-accounting\config\function_pdf.php(948): include('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\acs-group-accounting\r_fetch_payment.php(583): __pdf_payment(Array, Array, 'P')
+#4 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 117
+[30-Jan-2023 08:51:07 Asia/Bangkok] PHP Fatal error:  Uncaught ValueError: max(): Argument #1 ($value) must contain at least one element in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php:117
+Stack trace:
+#0 D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php(117): max(Array)
+#1 D:\xampp\htdocs\acs-group-accounting\variable_payment.php(58): __invoice_data('', NULL)
+#2 D:\xampp\htdocs\acs-group-accounting\config\function_pdf.php(948): include('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\acs-group-accounting\r_fetch_payment.php(583): __pdf_payment(Array, Array, 'P')
+#4 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 117
+[30-Jan-2023 08:51:52 Asia/Bangkok] PHP Fatal error:  Uncaught ValueError: max(): Argument #1 ($value) must contain at least one element in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php:118
+Stack trace:
+#0 D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php(118): max(Array)
+#1 D:\xampp\htdocs\acs-group-accounting\variable_payment.php(58): __invoice_data('', NULL)
+#2 D:\xampp\htdocs\acs-group-accounting\config\function_pdf.php(948): include('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\acs-group-accounting\r_fetch_payment.php(583): __pdf_payment(Array, Array, 'P')
+#4 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 118
+[30-Jan-2023 08:55:39 Asia/Bangkok] PHP Fatal error:  Uncaught ValueError: max(): Argument #1 ($value) must contain at least one element in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php:117
+Stack trace:
+#0 D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php(117): max(Array)
+#1 D:\xampp\htdocs\acs-group-accounting\variable_payment.php(58): __invoice_data('', NULL)
+#2 D:\xampp\htdocs\acs-group-accounting\config\function_pdf.php(948): include('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\acs-group-accounting\r_fetch_payment.php(583): __pdf_payment(Array, Array, 'P')
+#4 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 117
+[30-Jan-2023 08:56:38 Asia/Bangkok] PHP Warning:  Undefined array key "" in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 120
+[30-Jan-2023 08:56:38 Asia/Bangkok] PHP Warning:  Trying to access array offset on value of type null in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 120
+[30-Jan-2023 08:56:38 Asia/Bangkok] PHP Warning:  Undefined array key "" in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 120
+[30-Jan-2023 08:56:38 Asia/Bangkok] PHP Warning:  Trying to access array offset on value of type null in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 120
+[30-Jan-2023 08:56:38 Asia/Bangkok] PHP Warning:  Undefined array key "" in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 120
+[30-Jan-2023 08:56:38 Asia/Bangkok] PHP Warning:  Trying to access array offset on value of type null in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 120
+[30-Jan-2023 08:56:38 Asia/Bangkok] PHP Warning:  Undefined array key "" in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 120
+[30-Jan-2023 08:56:38 Asia/Bangkok] PHP Warning:  Trying to access array offset on value of type null in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 120
+[30-Jan-2023 08:56:38 Asia/Bangkok] PHP Warning:  Undefined array key "" in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 120
+[30-Jan-2023 08:56:38 Asia/Bangkok] PHP Warning:  Trying to access array offset on value of type null in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 120
+[30-Jan-2023 08:56:38 Asia/Bangkok] PHP Warning:  Undefined array key "" in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 120
+[30-Jan-2023 08:56:38 Asia/Bangkok] PHP Warning:  Trying to access array offset on value of type null in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 120
+[30-Jan-2023 08:57:26 Asia/Bangkok] PHP Fatal error:  Uncaught ValueError: max(): Argument #1 ($value) must contain at least one element in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php:118
+Stack trace:
+#0 D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php(118): max(Array)
+#1 D:\xampp\htdocs\acs-group-accounting\variable_payment.php(58): __invoice_data('', NULL)
+#2 D:\xampp\htdocs\acs-group-accounting\config\function_pdf.php(948): include('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\acs-group-accounting\r_fetch_payment.php(583): __pdf_payment(Array, Array, 'P')
+#4 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 118
+[30-Jan-2023 08:58:23 Asia/Bangkok] PHP Fatal error:  Cannot use [] for unsetting in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 117
+[30-Jan-2023 08:59:19 Asia/Bangkok] PHP Fatal error:  Uncaught ValueError: max(): Argument #1 ($value) must contain at least one element in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php:120
+Stack trace:
+#0 D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php(120): max(Array)
+#1 D:\xampp\htdocs\acs-group-accounting\variable_payment.php(58): __invoice_data('', NULL)
+#2 D:\xampp\htdocs\acs-group-accounting\config\function_pdf.php(948): include('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\acs-group-accounting\r_fetch_payment.php(583): __pdf_payment(Array, Array, 'P')
+#4 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 120
+[30-Jan-2023 08:59:29 Asia/Bangkok] PHP Fatal error:  Uncaught ValueError: max(): Argument #1 ($value) must contain at least one element in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php:120
+Stack trace:
+#0 D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php(120): max(Array)
+#1 D:\xampp\htdocs\acs-group-accounting\variable_payment.php(58): __invoice_data('', NULL)
+#2 D:\xampp\htdocs\acs-group-accounting\config\function_pdf.php(948): include('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\acs-group-accounting\r_fetch_payment.php(583): __pdf_payment(Array, Array, 'P')
+#4 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 120
+[30-Jan-2023 08:59:52 Asia/Bangkok] PHP Warning:  Undefined variable $emptyRemoved in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 120
+[30-Jan-2023 08:59:52 Asia/Bangkok] PHP Fatal error:  Uncaught TypeError: max(): Argument #1 ($value) must be of type array, null given in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php:120
+Stack trace:
+#0 D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php(120): max(NULL)
+#1 D:\xampp\htdocs\acs-group-accounting\r_fetch_payment.php(521): __invoice_data('3318', '')
+#2 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 120
+[30-Jan-2023 09:00:11 Asia/Bangkok] PHP Fatal error:  Uncaught ValueError: max(): Argument #1 ($value) must contain at least one element in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php:118
+Stack trace:
+#0 D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php(118): max(Array)
+#1 D:\xampp\htdocs\acs-group-accounting\variable_payment.php(58): __invoice_data('', NULL)
+#2 D:\xampp\htdocs\acs-group-accounting\config\function_pdf.php(948): include('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\acs-group-accounting\r_fetch_payment.php(583): __pdf_payment(Array, Array, 'P')
+#4 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 118
+[30-Jan-2023 09:00:50 Asia/Bangkok] PHP Fatal error:  Uncaught ValueError: max(): Argument #1 ($value) must contain at least one element in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php:118
+Stack trace:
+#0 D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php(118): max(Array)
+#1 D:\xampp\htdocs\acs-group-accounting\variable_payment.php(58): __invoice_data('', NULL)
+#2 D:\xampp\htdocs\acs-group-accounting\config\function_pdf.php(948): include('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\acs-group-accounting\r_fetch_payment.php(583): __pdf_payment(Array, Array, 'P')
+#4 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 118
+[30-Jan-2023 09:01:14 Asia/Bangkok] PHP Fatal error:  Uncaught ValueError: max(): Argument #1 ($value) must contain at least one element in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php:119
+Stack trace:
+#0 D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php(119): max(Array)
+#1 D:\xampp\htdocs\acs-group-accounting\variable_payment.php(58): __invoice_data('', NULL)
+#2 D:\xampp\htdocs\acs-group-accounting\config\function_pdf.php(948): include('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\acs-group-accounting\r_fetch_payment.php(583): __pdf_payment(Array, Array, 'P')
+#4 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 119
+[30-Jan-2023 09:01:40 Asia/Bangkok] PHP Fatal error:  Uncaught ValueError: max(): Argument #1 ($value) must contain at least one element in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php:119
+Stack trace:
+#0 D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php(119): max(Array)
+#1 D:\xampp\htdocs\acs-group-accounting\variable_payment.php(58): __invoice_data('', NULL)
+#2 D:\xampp\htdocs\acs-group-accounting\config\function_pdf.php(948): include('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\acs-group-accounting\r_fetch_payment.php(583): __pdf_payment(Array, Array, 'P')
+#4 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 119
+[30-Jan-2023 09:02:13 Asia/Bangkok] PHP Fatal error:  Uncaught ValueError: max(): Argument #1 ($value) must contain at least one element in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php:119
+Stack trace:
+#0 D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php(119): max(Array)
+#1 D:\xampp\htdocs\acs-group-accounting\variable_payment.php(58): __invoice_data('', NULL)
+#2 D:\xampp\htdocs\acs-group-accounting\config\function_pdf.php(948): include('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\acs-group-accounting\r_fetch_payment.php(583): __pdf_payment(Array, Array, 'P')
+#4 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 119
+[30-Jan-2023 09:03:27 Asia/Bangkok] PHP Fatal error:  Uncaught ValueError: max(): Argument #1 ($value) must contain at least one element in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php:123
+Stack trace:
+#0 D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php(123): max(Array)
+#1 D:\xampp\htdocs\acs-group-accounting\variable_payment.php(58): __invoice_data('', NULL)
+#2 D:\xampp\htdocs\acs-group-accounting\config\function_pdf.php(948): include('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\acs-group-accounting\r_fetch_payment.php(583): __pdf_payment(Array, Array, 'P')
+#4 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 123
+[30-Jan-2023 09:04:06 Asia/Bangkok] PHP Fatal error:  Uncaught ValueError: max(): Argument #1 ($value) must contain at least one element in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php:123
+Stack trace:
+#0 D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php(123): max(Array)
+#1 D:\xampp\htdocs\acs-group-accounting\variable_payment.php(58): __invoice_data('', NULL)
+#2 D:\xampp\htdocs\acs-group-accounting\config\function_pdf.php(948): include('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\acs-group-accounting\r_fetch_payment.php(583): __pdf_payment(Array, Array, 'P')
+#4 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 123
+[30-Jan-2023 09:05:00 Asia/Bangkok] PHP Fatal error:  Uncaught ValueError: max(): Argument #1 ($value) must contain at least one element in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php:123
+Stack trace:
+#0 D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php(123): max(Array)
+#1 D:\xampp\htdocs\acs-group-accounting\r_fetch_payment.php(521): __invoice_data('3318', '')
+#2 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 123
+[30-Jan-2023 09:05:37 Asia/Bangkok] PHP Fatal error:  Uncaught ValueError: max(): Argument #1 ($value) must contain at least one element in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php:123
+Stack trace:
+#0 D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php(123): max(Array)
+#1 D:\xampp\htdocs\acs-group-accounting\variable_payment.php(58): __invoice_data('', NULL)
+#2 D:\xampp\htdocs\acs-group-accounting\config\function_pdf.php(948): include('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\acs-group-accounting\r_fetch_payment.php(583): __pdf_payment(Array, Array, 'P')
+#4 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 123
+[30-Jan-2023 09:05:54 Asia/Bangkok] PHP Fatal error:  Uncaught ValueError: max(): Argument #1 ($value) must contain at least one element in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php:125
+Stack trace:
+#0 D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php(125): max(Array)
+#1 D:\xampp\htdocs\acs-group-accounting\variable_payment.php(58): __invoice_data('', NULL)
+#2 D:\xampp\htdocs\acs-group-accounting\config\function_pdf.php(948): include('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\acs-group-accounting\r_fetch_payment.php(583): __pdf_payment(Array, Array, 'P')
+#4 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 125
+[30-Jan-2023 09:06:46 Asia/Bangkok] PHP Warning:  Undefined variable $v in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 117
+[30-Jan-2023 09:06:46 Asia/Bangkok] PHP Fatal error:  Uncaught TypeError: array_filter(): Argument #1 ($array) must be of type array, null given in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php:121
+Stack trace:
+#0 D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php(121): array_filter(NULL, Object(Closure))
+#1 D:\xampp\htdocs\acs-group-accounting\r_fetch_payment.php(521): __invoice_data('3318', '')
+#2 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 121
+[30-Jan-2023 09:07:05 Asia/Bangkok] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php:118
+Stack trace:
+#0 [internal function]: {closure}('3318')
+#1 D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php(121): array_filter(Array, Object(Closure))
+#2 D:\xampp\htdocs\acs-group-accounting\r_fetch_payment.php(521): __invoice_data('3318', '')
+#3 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 118
+[30-Jan-2023 09:07:19 Asia/Bangkok] PHP Fatal error:  Uncaught ValueError: max(): Argument #1 ($value) must contain at least one element in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php:125
+Stack trace:
+#0 D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php(125): max(Array)
+#1 D:\xampp\htdocs\acs-group-accounting\variable_payment.php(58): __invoice_data('', NULL)
+#2 D:\xampp\htdocs\acs-group-accounting\config\function_pdf.php(948): include('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\acs-group-accounting\r_fetch_payment.php(583): __pdf_payment(Array, Array, 'P')
+#4 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 125
+[30-Jan-2023 09:07:36 Asia/Bangkok] PHP Warning:  Undefined variable $arr_inv_createdate_max in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 119
+[30-Jan-2023 09:07:36 Asia/Bangkok] PHP Fatal error:  Uncaught ValueError: max(): Argument #1 ($value) must contain at least one element in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php:125
+Stack trace:
+#0 D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php(125): max(Array)
+#1 D:\xampp\htdocs\acs-group-accounting\r_fetch_payment.php(521): __invoice_data('3318', '')
+#2 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 125
+[30-Jan-2023 09:07:47 Asia/Bangkok] PHP Fatal error:  Uncaught ValueError: max(): Argument #1 ($value) must contain at least one element in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php:125
+Stack trace:
+#0 D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php(125): max(Array)
+#1 D:\xampp\htdocs\acs-group-accounting\r_fetch_payment.php(521): __invoice_data('3318', '')
+#2 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 125
+[30-Jan-2023 09:08:12 Asia/Bangkok] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function {closure}(), 1 passed and exactly 2 expected in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php:117
+Stack trace:
+#0 [internal function]: {closure}('3318')
+#1 D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php(121): array_filter(Array, Object(Closure))
+#2 D:\xampp\htdocs\acs-group-accounting\r_fetch_payment.php(521): __invoice_data('3318', '')
+#3 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 117
+[30-Jan-2023 09:12:52 Asia/Bangkok] PHP Fatal error:  Can't use function return value in write context in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 117
+[30-Jan-2023 09:14:17 Asia/Bangkok] PHP Fatal error:  Uncaught ValueError: max(): Argument #1 ($value) must contain at least one element in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php:117
+Stack trace:
+#0 D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php(117): max(Array)
+#1 D:\xampp\htdocs\acs-group-accounting\variable_payment.php(58): __invoice_data('', NULL)
+#2 D:\xampp\htdocs\acs-group-accounting\config\function_pdf.php(948): include('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\acs-group-accounting\r_fetch_payment.php(583): __pdf_payment(Array, Array, 'P')
+#4 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 117
+[30-Jan-2023 09:15:12 Asia/Bangkok] PHP Fatal error:  Uncaught ValueError: max(): Argument #1 ($value) must contain at least one element in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php:120
+Stack trace:
+#0 D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php(120): max(Array)
+#1 D:\xampp\htdocs\acs-group-accounting\variable_payment.php(58): __invoice_data('', NULL)
+#2 D:\xampp\htdocs\acs-group-accounting\config\function_pdf.php(948): include('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\acs-group-accounting\r_fetch_payment.php(583): __pdf_payment(Array, Array, 'P')
+#4 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 120
+[30-Jan-2023 09:16:10 Asia/Bangkok] PHP Fatal error:  Uncaught ValueError: max(): Argument #1 ($value) must contain at least one element in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php:120
+Stack trace:
+#0 D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php(120): max(Array)
+#1 D:\xampp\htdocs\acs-group-accounting\variable_payment.php(58): __invoice_data('', NULL)
+#2 D:\xampp\htdocs\acs-group-accounting\config\function_pdf.php(948): include('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\acs-group-accounting\r_fetch_payment.php(583): __pdf_payment(Array, Array, 'P')
+#4 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 120
+[30-Jan-2023 09:16:33 Asia/Bangkok] PHP Fatal error:  Uncaught ValueError: max(): Argument #1 ($value) must contain at least one element in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php:120
+Stack trace:
+#0 D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php(120): max(Array)
+#1 D:\xampp\htdocs\acs-group-accounting\variable_payment.php(58): __invoice_data('', NULL)
+#2 D:\xampp\htdocs\acs-group-accounting\config\function_pdf.php(948): include('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\acs-group-accounting\r_fetch_payment.php(583): __pdf_payment(Array, Array, 'P')
+#4 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 120
+[30-Jan-2023 09:17:24 Asia/Bangkok] PHP Warning:  Undefined variable $arr_inv_createdate_max in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 117
+[30-Jan-2023 09:17:24 Asia/Bangkok] PHP Fatal error:  Uncaught TypeError: max(): Argument #1 ($value) must be of type array, null given in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php:117
+Stack trace:
+#0 D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php(117): max(NULL)
+#1 D:\xampp\htdocs\acs-group-accounting\variable_payment.php(58): __invoice_data('', NULL)
+#2 D:\xampp\htdocs\acs-group-accounting\config\function_pdf.php(948): include('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\acs-group-accounting\r_fetch_payment.php(583): __pdf_payment(Array, Array, 'P')
+#4 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 117
+[30-Jan-2023 09:17:30 Asia/Bangkok] PHP Warning:  Undefined variable $arr_inv_createdate_max in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 117
+[30-Jan-2023 09:17:30 Asia/Bangkok] PHP Fatal error:  Uncaught TypeError: max(): Argument #1 ($value) must be of type array, null given in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php:117
+Stack trace:
+#0 D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php(117): max(NULL)
+#1 D:\xampp\htdocs\acs-group-accounting\variable_payment.php(58): __invoice_data('', NULL)
+#2 D:\xampp\htdocs\acs-group-accounting\config\function_pdf.php(948): include('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\acs-group-accounting\r_fetch_payment.php(583): __pdf_payment(Array, Array, 'P')
+#4 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 117
+[30-Jan-2023 09:19:47 Asia/Bangkok] PHP Fatal error:  Uncaught ValueError: max(): Argument #1 ($value) must contain at least one element in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php:121
+Stack trace:
+#0 D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php(121): max(Array)
+#1 D:\xampp\htdocs\acs-group-accounting\variable_payment.php(58): __invoice_data('', NULL)
+#2 D:\xampp\htdocs\acs-group-accounting\config\function_pdf.php(948): include('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\acs-group-accounting\r_fetch_payment.php(583): __pdf_payment(Array, Array, 'P')
+#4 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 121
+[30-Jan-2023 09:21:19 Asia/Bangkok] PHP Fatal error:  Uncaught TypeError: mysqli_fetch_assoc(): Argument #1 ($result) must be of type mysqli_result, bool given in D:\xampp\htdocs\acs-group-accounting\config\database2.php:33
+Stack trace:
+#0 D:\xampp\htdocs\acs-group-accounting\config\database2.php(33): mysqli_fetch_assoc(false)
+#1 D:\xampp\htdocs\acs-group-accounting\variable_payment.php(179): database->result()
+#2 D:\xampp\htdocs\acs-group-accounting\config\function_pdf.php(948): include('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\acs-group-accounting\r_fetch_payment.php(583): __pdf_payment(Array, Array, 'P')
+#4 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\database2.php on line 33
+[30-Jan-2023 09:22:16 Asia/Bangkok] PHP Fatal error:  Uncaught ValueError: max(): Argument #1 ($value) must contain at least one element in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php:119
+Stack trace:
+#0 D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php(119): max(Array)
+#1 D:\xampp\htdocs\acs-group-accounting\variable_payment.php(58): __invoice_data('', NULL)
+#2 D:\xampp\htdocs\acs-group-accounting\config\function_pdf.php(948): include('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\acs-group-accounting\r_fetch_payment.php(583): __pdf_payment(Array, Array, 'P')
+#4 {main}
+  thrown in D:\xampp\htdocs\acs-group-accounting\config\function_invoice.php on line 119
+[30-Jan-2023 09:42:57 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:42:57 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:42:57 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 238
+[30-Jan-2023 09:42:57 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 239
+[30-Jan-2023 09:42:57 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 245
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 238
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 239
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 245
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 238
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 239
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 245
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 238
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 239
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 245
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 238
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 239
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 245
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 238
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 239
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 245
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 238
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 239
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 245
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 238
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 239
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 245
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 238
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 239
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 245
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 238
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 239
+[30-Jan-2023 09:43:05 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 245
+[30-Jan-2023 09:43:06 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:43:06 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:43:06 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 238
+[30-Jan-2023 09:43:06 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 239
+[30-Jan-2023 09:43:06 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 245
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 238
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 239
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 245
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 238
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 239
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 245
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 238
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 239
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 245
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 238
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 239
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 245
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 238
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 239
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 245
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 238
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 239
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 245
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 238
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 239
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 245
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 238
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 239
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 245
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 238
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 239
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 245
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 238
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 239
+[30-Jan-2023 09:44:25 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 245
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 238
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 239
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 245
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 238
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 239
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 245
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 238
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 239
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 245
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 238
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 239
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 245
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 238
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 239
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 245
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 238
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 239
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 245
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 238
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 239
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 245
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 238
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 239
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 245
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 238
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 239
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 245
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 140
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 238
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $text_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 239
+[30-Jan-2023 09:48:11 Asia/Bangkok] PHP Warning:  Undefined variable $color_payStatus in D:\xampp\htdocs\acs-group-accounting\variable_payment.php on line 245

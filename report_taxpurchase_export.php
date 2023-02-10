@@ -1,5 +1,8 @@
 <?php
+
 include 'connect.php';
+
+
 function DateThai($strDate) {
     $strYear = date("Y",strtotime($strDate))+543;
     $strMonth= date("n",strtotime($strDate));
@@ -11,6 +14,7 @@ function DateThai($strDate) {
     $strMonthThai=$strMonthCut[$strMonth];
     return "$strDay $strMonthThai $strYear";
 }
+
 function DateMonthThai($strDate,$mode)
 {
     if($mode === "head"){
@@ -29,10 +33,13 @@ function DateMonthThai($strDate,$mode)
         $strMonthCut = array("", "ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.", "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค.");
     }
     $strMonthThai = $strMonthCut[$strMonth];
+
     return array($strDay,$strMonthThai,$strYear);
 }
+
 $tax_id = isset($_GET['tax_id']) ? $_GET['tax_id'] : '';
 $download = isset($_GET['download']) ? $_GET['download'] : 0;
+
 $str_sql = "SELECT *,tl.created_at AS taxlist_date,t.tax_created_at AS tax_date FROM taxpurchase_tb AS t
             INNER JOIN taxpurchaselist_tb AS tl ON t.tax_id = tl.list_tax_id
             INNER JOIN company_tb AS c ON t.tax_comp_id = c.comp_id
@@ -41,8 +48,11 @@ $str_sql = "SELECT *,tl.created_at AS taxlist_date,t.tax_created_at AS tax_date 
             
 $obj_query = mysqli_query($obj_con, $str_sql);
 $obj_row_tax = mysqli_fetch_assoc($obj_query);
+
 $filename = "รายงานใบภาษีซื้อรายเดือน" . $obj_row_tax['tax_id'];
+
 $date_head = DateMonthThai($obj_row_tax['tax_date'],"head");
+
 $expprt_pdf = false;
 if(isset($_GET['export'])){
 	if($_GET['export']== 'excel'){
@@ -56,6 +66,7 @@ if(isset($_GET['export'])){
 	    $expprt_pdf = true;
 	}
 }
+
 if($expprt_pdf){
    require_once __DIR__ . '/vendor/autoload.php';
     
@@ -128,6 +139,7 @@ if($expprt_pdf){
                 </td>
             </tr>
         </table>
+
         <table cellspacing="0" cellpadding="0" border="0" width="100%">
             <tr>
                 <td style="height: 10px"></td>
@@ -136,6 +148,7 @@ if($expprt_pdf){
         ';
     ob_start();  
 }
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -190,15 +203,13 @@ if($expprt_pdf){
                     <h3 class="text-center"><b>ชื่อผู้ประกอบการ</b>  <?= $obj_row_tax['comp_name'] ?> <b>เลขประจำตัวผู้เสียภาษีอากร</b> <?= $obj_row_tax['comp_taxno'] ?></h3>
                     <h3 class="text-center"><b>ชื่อสถานประกอบการ</b> <?= $obj_row_tax['comp_name'] ?> <b>สำนักงานใหญ่</b></h3>
 				      <?php } ?>
-				      
-				      
 					<table border="1" class="table txtbody">
 						<thead>
 							<tr class="info">
 								<th <?= ($expprt_pdf) ? 'width="4%"': "";?>>ลำดับ</th>
 								<th <?= ($expprt_pdf) ? 'width="10%"': "";?>>วันที่</th>
-								<th <?= ($expprt_pdf) ? 'width="18%"': "";?>>เล่มที่/เลขที่</th>
-								<th <?= ($expprt_pdf) ? 'width="40%"': "";?>>ชื่อผู้ซื้อ/ผู้ให้บริการ/รายการ</th>
+								<th <?= ($expprt_pdf) ? 'width="20%"': "";?>>เล่มที่/เลขที่</th>
+								<th <?= ($expprt_pdf) ? 'width="38%"': "";?>>ชื่อผู้ซื้อ/ผู้ให้บริการ/รายการ</th>
                                 <th <?= ($expprt_pdf) ? 'width="10%"': "";?>>จำนวนเงิน</th>
                                 <th <?= ($expprt_pdf) ? 'width="9%"': "";?>>ภาษีมูลค่าเพิ่ม</th>
                                 <th <?= ($expprt_pdf) ? 'width="9%"': "";?>>จำนวนเงินรวม</th>
@@ -210,10 +221,11 @@ if($expprt_pdf){
 								<td><?= $i++ ?></td>
 								<td><?= DateThai($obj_row['taxlist_date']) ?></td>
 								<td><?= $obj_row['list_no'] ?></td>
-								<td style="text-align: left;"><?= $obj_row['paya_name'] . $obj_row['list_desc'] ?></td>
+								<td style="text-align: left;"><?= $obj_row['paya_name'] . " / " . $obj_row['list_desc'] ?></td>
                                 <td style="text-align: right;"><?= number_format($obj_row['list_price'],2) ?></td>
 								<td style="text-align: right;"><?= number_format($obj_row['list_vat'],2) ?></td>
 								<td style="text-align: right;"><?= number_format($obj_row['list_result'],2) ?></td>
+
 							</tr>
                             <?php
                                 $sum_subtotal += $obj_row['list_price'];
@@ -237,6 +249,7 @@ if($expprt_pdf){
                                     <b><?= number_format($sum_grandtotal,2) ?></b>
                                 </td>
                             <tr>
+
                         </tfoot>
 					</table>
 				</div>
@@ -246,7 +259,6 @@ if($expprt_pdf){
 </html>
 <?php
 if($expprt_pdf){
-    $filename = $filename.".pdf";
     $html = ob_get_clean();ob_end_clean(); 
     $mpdf->SetHeader($header);
     $mpdf->WriteHTML($html);

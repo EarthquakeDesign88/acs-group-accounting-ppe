@@ -63,33 +63,44 @@
 		$total = 0;
 
 		foreach($obj_query as $obj_row) {
-
+			$check_subtotal = 0;
 			if($obj_row["invrcptD_irid"] == '') {
 				$text = 'display: block';
 				$desctext = 'รอแจ้งหนี้';
 				$invoiceNo = '';
 				$sty = 'color: #FF9900; font-weight: 700;';
 			} else {
-
-				$str_sql_ir = "SELECT * FROM invoice_rcpt_tb AS ir INNER JOIN invoice_rcpt_desc_tb AS ird ON ir.invrcpt_id = ird.invrcptD_irid WHERE invrcptD_id = '". $obj_row["invrcptD_id"] ."'";
+				
+				$str_sql_ir = "SELECT *,SUM(invrcpt_subtotal) as sum_subtotal FROM invoice_rcpt_tb AS ir INNER JOIN invoice_rcpt_desc_tb AS ird ON ir.invrcpt_irDid = ird.irDid WHERE ir.invrcpt_irDid = '". $obj_row["irDid"] ."'";
 				$obj_rs_ir = mysqli_query($obj_con, $str_sql_ir);
 				$obj_row_ir = mysqli_fetch_array($obj_rs_ir);
 				
 				// echo $str_sql_ir;
 				
-				if($obj_row_ir["invrcptD_irid"] == '') {
-					$invoiceNo = '';
+				$check_irid = $obj_row["invrcptD_irid"];
+				
+				$check_subtotal = $obj_row['invrcptD_subtotal'] - $obj_row_ir['sum_subtotal'];
+				
+				if($obj_row_ir["invrcpt_book"] == '') {
+					$invoiceNo = '('. $obj_row_ir["invrcpt_no"] .')';
 				} else {
-					if($obj_row_ir["invrcpt_book"] == '') {
-						$invoiceNo = '('. $obj_row_ir["invrcpt_no"] .')';
-					} else {
-						$invoiceNo = '('. $obj_row_ir["invrcpt_book"].'/'.$obj_row_ir["invrcpt_no"] .')';
-					}
+					$invoiceNo = '('. $obj_row_ir["invrcpt_book"].'/'.$obj_row_ir["invrcpt_no"] .')';
+				}
+				
+				if($check_irid != '' && $check_subtotal != 0) {
+
+					$text = 'display: block';
+					$desctext = 'ชำระบางส่วน <br> ';
+					$sty = 'color: red;';
+
+				} else {
+					
+					$text = 'display: none';
+					$desctext = 'ออกใบแจ้งหนี้แล้ว <br> ';
+					$sty = 'color: #008800;';
 				}
 
-				$text = 'display: none';
-				$desctext = 'ออกใบแจ้งหนี้แล้ว <br> '. $invoiceNo;
-				$sty = 'color: #008800;';
+
 
 			}
 
@@ -156,8 +167,16 @@
 								<b>รายการ : </b>'. $obj_row["invrcptD_description1"] .' '. $obj_row["invrcptD_description2"] .'
 							</td>
 							<td class="text-right">
-								'. number_format($obj_row["invrcptD_subtotal"],2) .'
-							</td>
+								'. number_format($obj_row["invrcptD_subtotal"],2) .'<br>';
+							
+							if($check_subtotal == 0){
+								$output	.=	'<span></span>';
+								
+							}else{
+								$output .=  '<span class="text-danger">'. number_format($check_subtotal,2) .'</span>';
+
+							}
+		$output	.=			'</td>
 							<td class="text-center" style="'. $sty .'">
 								'. $desctext .'
 							</td>
@@ -337,10 +356,10 @@
 
 						var check = document.getElementById("invrcptstatus"+selirDid).value;
 						var x = document.getElementById("valnet"+selirDid).value;
-
+						
 						if (check == 0) {
 
-							// alert("Select : 1");
+							// alert("Select : ",sts);
 
 							document.getElementById("tr"+selirDid).style.backgroundColor = "#DAFFCC";
 							document.getElementById("invrcptstatus"+selirDid).value = 1;
@@ -362,7 +381,8 @@
 							});
 
 							$("#CountChkAll").val(count);
-
+							console.log(count)
+							console.log(selirDid)
 							$.ajax({
 								data: {selirDid:selirDid, sts:sts},
 								type: "post",
@@ -375,7 +395,7 @@
 
 						} else {
 
-							// alert("No Select : 0");
+							// alert("No Select : ",sts);
 							
 							document.getElementById("tr"+selirDid).style.backgroundColor = "#FFFFFF";
 							document.getElementById("invrcptstatus"+selirDid).value = 0;

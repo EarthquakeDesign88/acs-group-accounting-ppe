@@ -98,6 +98,25 @@
 			$invoiceNo = $obj_row["invrcpt_book"]."/".$obj_row["invrcpt_no"];
 		}
 
+		$inv_reid = $obj_row['invrcpt_reid'];
+
+		if($inv_reid != ""){
+			$str_receipt = "SELECT * FROM receipt_tb WHERE re_id = '$inv_reid'";
+			$query_receipt = mysqli_query($obj_con,$str_receipt);
+			$obj_receipt = mysqli_fetch_assoc($query_receipt);
+		}
+
+		$amount1 = $obj_row['invrcpt_amount1'] - $obj_receipt['re_amount1'];
+		$amount2 = $obj_row['invrcpt_amount2'] - $obj_receipt['re_amount2'];
+		$amount3 = $obj_row['invrcpt_amount3'] - $obj_receipt['re_amount3'];
+		$amount4 = $obj_row['invrcpt_amount4'] - $obj_receipt['re_amount4'];
+		$amount5 = $obj_row['invrcpt_amount5'] - $obj_receipt['re_amount5'];
+		$amount6 = $obj_row['invrcpt_amount6'] - $obj_receipt['re_amount6'];
+		$amount7 = $obj_row['invrcpt_amount7'] - $obj_receipt['re_amount7'];
+		$amount8 = $obj_row['invrcpt_amount8'] - $obj_receipt['re_amount8'];
+
+		$subtotal = $obj_row['invrcpt_subtotal'] - $obj_receipt['re_subtotal'];
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -373,29 +392,29 @@
 											<div class="text-center" style="background-color: #E9ECEF; padding: 12px 0; border: 1px solid #000;">
 												<b>จำนวนเงิน</b>
 											</div>
-											<input type="text" class="form-control text-right my-1" name="amount1" id="amount1" autocomplete="off" tabindex="23" value="<?=number_format($obj_row["invrcpt_amount1"],2);?>">
-											<input type="text" class="form-control text-right my-1 d-none" name="amountHidden1" id="amountHidden1" value="<?=$obj_row["invrcpt_amount1"];?>">
+											<input type="text" class="form-control text-right my-1" name="amount1" id="amount1" autocomplete="off" tabindex="23" value="<?=number_format($amount1,2);?>">
+											<input type="text" class="form-control text-right my-1 d-none" name="amountHidden1" id="amountHidden1" value="<?=$amount1;?>">
 
-											<input type="text" class="form-control text-right my-1" name="amount2" id="amount2" autocomplete="off" tabindex="24" value="<?=number_format($obj_row["invrcpt_amount2"],2);?>">
-											<input type="text" class="form-control text-right my-1 d-none" name="amountHidden2" id="amountHidden2" value="<?=$obj_row["invrcpt_amount2"];?>">
+											<input type="text" class="form-control text-right my-1" name="amount2" id="amount2" autocomplete="off" tabindex="24" value="<?=number_format($amount2,2);?>">
+											<input type="text" class="form-control text-right my-1 d-none" name="amountHidden2" id="amountHidden2" value="<?=$amount2;?>">
 
-											<input type="text" class="form-control text-right my-1" name="amount3" id="amount3" autocomplete="off" tabindex="25" value="<?=number_format($obj_row["invrcpt_amount3"],2);?>">
-											<input type="text" class="form-control text-right my-1 d-none" name="amountHidden3" id="amountHidden3" value="<?=$obj_row["invrcpt_amount3"];?>">
+											<input type="text" class="form-control text-right my-1" name="amount3" id="amount3" autocomplete="off" tabindex="25" value="<?=number_format($amount3,2);?>">
+											<input type="text" class="form-control text-right my-1 d-none" name="amountHidden3" id="amountHidden3" value="<?=$amount3;?>">
 
-											<input type="text" class="form-control text-right my-1" name="amount4" id="amount4" autocomplete="off" tabindex="26" value="<?=number_format($obj_row["invrcpt_amount4"],2);?>">
-											<input type="text" class="form-control text-right my-1 d-none" name="amountHidden4" id="amountHidden4" value="<?=$obj_row["invrcpt_amount4"];?>">
+											<input type="text" class="form-control text-right my-1" name="amount4" id="amount4" autocomplete="off" tabindex="26" value="<?=number_format($amount4,2);?>">
+											<input type="text" class="form-control text-right my-1 d-none" name="amountHidden4" id="amountHidden4" value="<?=$amount4;?>">
 
-											<input type="text" class="form-control text-right my-1" name="amount5" id="amount5" autocomplete="off" tabindex="27" value="<?=number_format($obj_row["invrcpt_amount5"],2);?>">
-											<input type="text" class="form-control text-right my-1 d-none" name="amountHidden5" id="amountHidden5" value="<?=$obj_row["invrcpt_amount5"];?>">
+											<input type="text" class="form-control text-right my-1" name="amount5" id="amount5" autocomplete="off" tabindex="27" value="<?=number_format($amount5,2);?>">
+											<input type="text" class="form-control text-right my-1 d-none" name="amountHidden5" id="amountHidden5" value="<?=$amount5;?>">
 
-											<input type="text" class="form-control text-right my-1" name="amount6" id="amount6" autocomplete="off" tabindex="28" value="<?=number_format($obj_row["invrcpt_amount6"],2);?>">
-											<input type="text" class="form-control text-right my-1 d-none" name="amountHidden6" id="amountHidden6" value="<?=$obj_row["invrcpt_amount6"];?>">
+											<input type="text" class="form-control text-right my-1" name="amount6" id="amount6" autocomplete="off" tabindex="28" value="<?=number_format($amount6,2);?>">
+											<input type="text" class="form-control text-right my-1 d-none" name="amountHidden6" id="amountHidden6" value="<?=$amount6;?>">
 
-											<input type="text" class="form-control text-right my-1" name="amount7" id="amount7" autocomplete="off" tabindex="29" value="<?=number_format($obj_row["invrcpt_amount7"],2);?>">
-											<input type="text" class="form-control text-right my-1 d-none" name="amountHidden7" id="amountHidden7" value="<?=$obj_row["invrcpt_amount7"];?>">
+											<input type="text" class="form-control text-right my-1" name="amount7" id="amount7" autocomplete="off" tabindex="29" value="<?=number_format($amount7,2);?>">
+											<input type="text" class="form-control text-right my-1 d-none" name="amountHidden7" id="amountHidden7" value="<?=$amount7;?>">
 
-											<input type="text" class="form-control text-right my-1" name="amount8" id="amount8" autocomplete="off" tabindex="30" value="<?=number_format($obj_row["invrcpt_amount8"],2);?>">
-											<input type="text" class="form-control text-right my-1 d-none" name="amountHidden8" id="amountHidden8" value="<?=$obj_row["invrcpt_amount8"];?>">
+											<input type="text" class="form-control text-right my-1" name="amount8" id="amount8" autocomplete="off" tabindex="30" value="<?=number_format($amount8,2);?>">
+											<input type="text" class="form-control text-right my-1 d-none" name="amountHidden8" id="amountHidden8" value="<?=$amount8;?>">
 										</div>
 									</div>
 								</div>
@@ -433,8 +452,8 @@
 								<div class="col-md-3 pl-1">
 									<div class="row">
 										<div class="col-md-12">
-											<input type="text" class="form-control my-1 text-right" name="subtotal" id="showSubtotal" autocomplete="off" tabindex="34" value="<?=number_format($obj_row["invrcpt_subtotal"],2);?>" readonly>
-											<input type="text" class="form-control my-1 text-right d-none" name="subtotalHidden" id="calSubtotal" value="<?=$obj_row["invrcpt_subtotal"];?>" readonly>
+											<input type="text" class="form-control my-1 text-right" name="subtotal" id="showSubtotal" autocomplete="off" tabindex="34" value="<?=number_format($subtotal,2);?>" readonly>
+											<input type="text" class="form-control my-1 text-right d-none" name="subtotalHidden" id="calSubtotal" value="<?=$subtotal?>" readonly>
 										
 											<input type="text" class="form-control my-1 text-right" name="vat" id="showVat" autocomplete="off" tabindex="36" value="<?=number_format($obj_row["invrcpt_vat"],2);?>" readonly>
 											<input type="text" class="form-control my-1 text-right d-none" name="vatHidden" id="calVat" value="<?=$obj_row["invrcpt_vat"];?>" readonly>
@@ -514,24 +533,24 @@
 											<div class="text-center" style="background-color: #E9ECEF; padding: 12px 0; border: 1px solid #000;">
 												<b>จำนวนเงิน</b>
 											</div>
-											<input type="text" class="form-control text-right my-1" name="amount1" id="amount1" autocomplete="off" tabindex="15" value="<?=number_format($obj_row["invrcpt_amount1"],2);?>">
-											<input type="text" class="form-control text-right my-1 d-none" name="amountHidden1" id="amountHidden1" value="<?=$obj_row["invrcpt_amount1"];?>">
-											<input type="text" class="form-control text-right my-1" name="amount2" id="amount2" autocomplete="off" tabindex="16" value="<?=number_format($obj_row["invrcpt_amount2"],2);?>">
-											<input type="text" class="form-control text-right my-1 d-none" name="amountHidden2" id="amountHidden2" value="<?=$obj_row["invrcpt_amount2"];?>">
-											<input type="text" class="form-control text-right my-1" name="amount3" id="amount3" autocomplete="off" tabindex="17" value="<?=number_format($obj_row["invrcpt_amount3"],2);?>">
-											<input type="text" class="form-control text-right my-1 d-none" name="amountHidden3" id="amountHidden3" value="<?=$obj_row["invrcpt_amount3"];?>">
-											<input type="text" class="form-control text-right my-1" name="amount4" id="amount4" autocomplete="off" tabindex="18" value="<?=number_format($obj_row["invrcpt_amount4"],2);?>">
-											<input type="text" class="form-control text-right my-1 d-none" name="amountHidden4" id="amountHidden4" value="<?=$obj_row["invrcpt_amount4"];?>">
-											<input type="text" class="form-control text-right my-1" name="amount5" id="amount5" autocomplete="off" tabindex="19" value="<?=number_format($obj_row["invrcpt_amount5"],2);?>">
-											<input type="text" class="form-control text-right my-1 d-none" name="amountHidden5" id="amountHidden5" value="<?=$obj_row["invrcpt_amount5"];?>">
+											<input type="text" class="form-control text-right my-1" name="amount1" id="amount1" autocomplete="off" tabindex="15" value="<?=number_format($amount1,2);?>">
+											<input type="text" class="form-control text-right my-1 d-none" name="amountHidden1" id="amountHidden1" value="<?=$amount1?>">
+											<input type="text" class="form-control text-right my-1" name="amount2" id="amount2" autocomplete="off" tabindex="16" value="<?=number_format($amount2,2);?>">
+											<input type="text" class="form-control text-right my-1 d-none" name="amountHidden2" id="amountHidden2" value="<?=$amount2?>">
+											<input type="text" class="form-control text-right my-1" name="amount3" id="amount3" autocomplete="off" tabindex="17" value="<?=number_format($amount3,2);?>">
+											<input type="text" class="form-control text-right my-1 d-none" name="amountHidden3" id="amountHidden3" value="<?=$amount3?>">
+											<input type="text" class="form-control text-right my-1" name="amount4" id="amount4" autocomplete="off" tabindex="18" value="<?=number_format($amount4,2);?>">
+											<input type="text" class="form-control text-right my-1 d-none" name="amountHidden4" id="amountHidden4" value="<?=$amount4?>">
+											<input type="text" class="form-control text-right my-1" name="amount5" id="amount5" autocomplete="off" tabindex="19" value="<?=number_format($amount5,2);?>">
+											<input type="text" class="form-control text-right my-1 d-none" name="amountHidden5" id="amountHidden5" value="<?=$amount5?>">
 
 											<?php if($cid == 'C014' || $cid == 'C015') { ?>	
-												<input type="text" class="form-control text-right my-1" name="amount6" id="amount6" autocomplete="off" tabindex="20" value="<?=number_format($obj_row["invrcpt_amount6"],2);?>">
-												<input type="text" class="form-control text-right my-1 d-none" name="amountHidden6" id="amountHidden6" value="<?=$obj_row["invrcpt_amount6"];?>">
-												<input type="text" class="form-control text-right my-1" name="amount7" id="amount7" autocomplete="off" tabindex="21" value="<?=number_format($obj_row["invrcpt_amount7"],2);?>">
-												<input type="text" class="form-control text-right my-1 d-none" name="amountHidden7" id="amountHidden7" value="<?=$obj_row["invrcpt_amount7"];?>">
-												<input type="text" class="form-control text-right my-1" name="amount8" id="amount8" autocomplete="off" tabindex="22" value="<?=number_format($obj_row["invrcpt_amount8"],2);?>">
-												<input type="text" class="form-control text-right my-1 d-none" name="amountHidden8" id="amountHidden8" value="<?=$obj_row["invrcpt_amount8"];?>">
+												<input type="text" class="form-control text-right my-1" name="amount6" id="amount6" autocomplete="off" tabindex="20" value="<?=number_format($amount6,2);?>">
+												<input type="text" class="form-control text-right my-1 d-none" name="amountHidden6" id="amountHidden6" value="<?=$amount6?>">
+												<input type="text" class="form-control text-right my-1" name="amount7" id="amount7" autocomplete="off" tabindex="21" value="<?=number_format($amount7,2);?>">
+												<input type="text" class="form-control text-right my-1 d-none" name="amountHidden7" id="amountHidden7" value="<?=$amount7?>">
+												<input type="text" class="form-control text-right my-1" name="amount8" id="amount8" autocomplete="off" tabindex="22" value="<?=number_format($amount8,2);?>">
+												<input type="text" class="form-control text-right my-1 d-none" name="amountHidden8" id="amountHidden8" value="<?=$amount8?>">
 											<?php } else { ?>
 												<input type="text" class="form-control text-right my-1" name="amount6" autocomplete="off" tabindex="20" readonly>
 												<input type="text" class="form-control text-right my-1 d-none" name="amountHidden6" id="amountHidden6" value="0.00">
@@ -578,8 +597,8 @@
 								<div class="col-md-3">
 									<div class="row">
 										<div class="col-md-12">
-											<input type="text" class="form-control my-1 text-right" name="subtotal" id="showSubtotal" autocomplete="off" tabindex="23" value="<?=number_format($obj_row["invrcpt_subtotal"],2);?>" readonly>
-											<input type="text" class="form-control my-1 text-right d-none" name="subtotalHidden" id="calSubtotal" value="<?=$obj_row["invrcpt_subtotal"];?>" readonly>
+											<input type="text" class="form-control my-1 text-right" name="subtotal" id="showSubtotal" autocomplete="off" tabindex="23" value="<?=number_format($subtotal,2);?>" readonly>
+											<input type="text" class="form-control my-1 text-right d-none" name="subtotalHidden" id="calSubtotal" value="<?=$subtotal?>" readonly>
 											<input type="text" class="form-control my-1 text-right" name="vat" id="showVat" autocomplete="off" tabindex="25" value="<?=number_format($obj_row["invrcpt_vat"],2);?>" readonly>
 											<input type="text" class="form-control my-1 text-right d-none" name="vatHidden" id="calVat" value="<?=$obj_row["invrcpt_vat"];?>" readonly>
 											<input type="text" class="form-control text-right" name="grandtotal" id="showGrandtotal" autocomplete="off" tabindex="27" value="<?=number_format($obj_row["invrcpt_grandtotal"],2);?>" readonly>

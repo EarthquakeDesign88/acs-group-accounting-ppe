@@ -23,7 +23,7 @@
 			// 										   INNER JOIN customer_tb AS c ON ird.invrcptD_custid = c.cust_id 
 			// 										   WHERE proj_compid = '$cid' AND proj_depid = '". $dep ."' AND invrcptD_projid = '". $projid ."' ";
 
-			$str_sql = "SELECT * FROM invoice_rcpt_desc_tb WHERE invrcptD_status = 1
+			$str_sql = "SELECT * FROM invoice_rcpt_desc_tb WHERE invrcptD_status = 1 AND invrcptD_irid = '' 
 						AND invrcptD_compid = '$compid' AND invrcptD_depid = '". $depid ."' AND invrcptD_projid = '". $projid ."'";
 			$obj_rs = mysqli_query($obj_con, $str_sql);
 			$i = 1;

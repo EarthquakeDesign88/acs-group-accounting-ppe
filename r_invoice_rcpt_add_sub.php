@@ -299,13 +299,9 @@
 				$invrcptduedate = '0000-00-00';
 			}
 
-			$_sql = "SELECT * FROM invoice_rcpt_desc_tb WHERE invrcptD_id = '".$_POST['irDid']."'";
-			$_query = mysqli_query($obj_con,$_sql);
-			$_obj = mysqli_fetch_assoc($_query);
-			
-			$_irID = $_obj['irDid'];
-			
-			$str_sql = "INSERT INTO invoice_rcpt_tb (invrcpt_book, invrcpt_no, invrcpt_date, invrcpt_compid, invrcpt_custid, invrcpt_depid, invrcpt_projid, invrcpt_description1, invrcpt_description2, invrcpt_description3, invrcpt_description4, invrcpt_description5, invrcpt_description6, invrcpt_description7, invrcpt_description8, invrcpt_description9, invrcpt_description10, invrcpt_description11, invrcpt_sub_description1, invrcpt_sub_description2, invrcpt_sub_description3, invrcpt_sub_description4, invrcpt_sub_description5, invrcpt_sub_description6, invrcpt_sub_description7, invrcpt_sub_description8, invrcpt_sub_description9, invrcpt_amount1, invrcpt_amount2, invrcpt_amount3, invrcpt_amount4, invrcpt_amount5, invrcpt_amount6, invrcpt_amount7, invrcpt_amount8, invrcpt_subtotal, invrcpt_vatpercent, invrcpt_vat, invrcpt_differencevat, invrcpt_grandtotal, invrcpt_differencegrandtotal, invrcpt_balancetotal, invrcpt_duedate, invrcpt_year, invrcpt_month, invrcpt_file, invrcpt_stsid, invrcpt_userid_create, invrcpt_createdate, invrcpt_userid_edit, invrcpt_editdate, invrcpt_reid, invrcpt_irDid) VALUES (";
+    
+
+			$str_sql = "INSERT INTO invoice_rcpt_tb (invrcpt_book, invrcpt_no, invrcpt_date, invrcpt_compid, invrcpt_custid, invrcpt_depid, invrcpt_projid, invrcpt_description1, invrcpt_description2, invrcpt_description3, invrcpt_description4, invrcpt_description5, invrcpt_description6, invrcpt_description7, invrcpt_description8, invrcpt_description9, invrcpt_description10, invrcpt_description11, invrcpt_sub_description1, invrcpt_sub_description2, invrcpt_sub_description3, invrcpt_sub_description4, invrcpt_sub_description5, invrcpt_sub_description6, invrcpt_sub_description7, invrcpt_sub_description8, invrcpt_sub_description9, invrcpt_amount1, invrcpt_amount2, invrcpt_amount3, invrcpt_amount4, invrcpt_amount5, invrcpt_amount6, invrcpt_amount7, invrcpt_amount8, invrcpt_subtotal, invrcpt_vatpercent, invrcpt_vat, invrcpt_differencevat, invrcpt_grandtotal, invrcpt_differencegrandtotal, invrcpt_balancetotal, invrcpt_duedate, invrcpt_year, invrcpt_month, invrcpt_file, invrcpt_stsid, invrcpt_userid_create, invrcpt_createdate, invrcpt_userid_edit, invrcpt_editdate, invrcpt_reid) VALUES (";
 			$str_sql .= "'" . $depcode . "',";
 			$str_sql .= "'" . $nextinvReno . "',";
 			$str_sql .= "'" . $invRedate . "',";
@@ -357,11 +353,9 @@
 			$str_sql .= "'" . $irCreateDate . "',";
 			$str_sql .= "'" . $iruseridEdit . "',";
 			$str_sql .= "'" . $irEditDate . "',";
-			$str_sql .= "'',";			
-			$str_sql .= "'" . $_irID . "'";
-			$str_sql .= ")";
+			$str_sql .= "'')";
+			$query = mysqli_query($obj_con, $str_sql) or die ("Error in query: $str_sql " . mysqli_error());
 
-			$query = mysqli_query($obj_con, $str_sql) or die ("Error in query: $str_sql " . mysqli_error($obj_con));
 			// echo $str_sql;
 
 			$str_sql_id = "SELECT MAX(invrcpt_id) AS invrcpt_id FROM invoice_rcpt_tb WHERE invrcpt_depid = '". $depid ."' ORDER BY invrcpt_id ASC";

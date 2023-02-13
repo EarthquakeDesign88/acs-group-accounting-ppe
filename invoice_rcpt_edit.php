@@ -98,24 +98,32 @@
 			$invoiceNo = $obj_row["invrcpt_book"]."/".$obj_row["invrcpt_no"];
 		}
 
-		$inv_reid = $obj_row['invrcpt_reid'];
+		$inv_reid = $obj_row['invrcpt_id'];
 
-		if($inv_reid != ""){
-			$str_receipt = "SELECT * FROM receipt_tb WHERE re_id = '$inv_reid'";
-			$query_receipt = mysqli_query($obj_con,$str_receipt);
-			$obj_receipt = mysqli_fetch_assoc($query_receipt);
-		}
+		$str_receipt = "SELECT * FROM receipt_tb WHERE re_invrcpt_id = '$inv_reid' AND re_stsid <> 'STS003'";
+		$query_receipt = mysqli_query($obj_con,$str_receipt);
 
-		$amount1 = $obj_row['invrcpt_amount1'] - $obj_receipt['re_amount1'];
-		$amount2 = $obj_row['invrcpt_amount2'] - $obj_receipt['re_amount2'];
-		$amount3 = $obj_row['invrcpt_amount3'] - $obj_receipt['re_amount3'];
-		$amount4 = $obj_row['invrcpt_amount4'] - $obj_receipt['re_amount4'];
-		$amount5 = $obj_row['invrcpt_amount5'] - $obj_receipt['re_amount5'];
-		$amount6 = $obj_row['invrcpt_amount6'] - $obj_receipt['re_amount6'];
-		$amount7 = $obj_row['invrcpt_amount7'] - $obj_receipt['re_amount7'];
-		$amount8 = $obj_row['invrcpt_amount8'] - $obj_receipt['re_amount8'];
+		while($obj_receipt = mysqli_fetch_assoc($query_receipt)){
+			$_amount1 += $obj_receipt['re_amount1'];
+			$_amount2 += $obj_receipt['re_amount2'];
+			$_amount3 += $obj_receipt['re_amount3'];
+			$_amount4 += $obj_receipt['re_amount4'];
+			$_amount5 += $obj_receipt['re_amount5'];
+			$_amount6 += $obj_receipt['re_amount6'];
+			$_amount7 += $obj_receipt['re_amount7'];
+			$_amount8 += $obj_receipt['re_amount8'];
+			$_subtotal += $obj_receipt['re_subtotal'];
+		};
 
-		$subtotal = $obj_row['invrcpt_subtotal'] - $obj_receipt['re_subtotal'];
+		$amount1 = ($obj_row['invrcpt_amount1'] - $_amount1);
+		$amount2 = ($obj_row['invrcpt_amount2'] - $_amount2);
+		$amount3 = ($obj_row['invrcpt_amount3'] - $_amount3);
+		$amount4 = ($obj_row['invrcpt_amount4'] - $_amount4);
+		$amount5 = ($obj_row['invrcpt_amount5'] - $_amount5);
+		$amount6 = ($obj_row['invrcpt_amount6'] - $_amount6);
+		$amount7 = ($obj_row['invrcpt_amount7'] - $_amount7);
+		$amount8 = ($obj_row['invrcpt_amount8'] - $_amount8);
+		$subtotal = ($obj_row['invrcpt_subtotal'] - $_subtotal);
 
 ?>
 <!DOCTYPE html>
@@ -646,7 +654,7 @@
 
 					<?php } ?>
 				</div>
-
+				<input type="text" class="form-control" id="subtotal_check" value="<?=number_format($subtotal,2);?>">
 				<div class="row py-4 px-1" style="background-color: #FFFFFF;">
 					<div class="col-md-12 pb-4 text-center">
 					    <button type="button" class="btn btn-success  btn-action btn-action-preview"><i class="icofont-save"></i> บันทึกข้อมูล</button>
@@ -710,6 +718,15 @@
 						closeOnClickOutside: false
 					}).then(function() {
 						frmEditInvoiceRe.custid.focus();
+					});
+				} else if($("#calSubtotal").val() > $("#subtotal_check").val() || $("#calSubtotal").val() < 0){
+					swal({
+						title: "จำนวนเงินไม่ถูกต้อง",
+						text: "กรุณากด ตกลง เพื่อดำเนินการต่อ",
+						type: "warning",
+						closeOnClickOutside: false
+					}).then(function() {
+						frmEditInvoiceRe.amount1.focus();
 					});
 				} else {
 				    if($(this).hasClass("btn-action-save")){

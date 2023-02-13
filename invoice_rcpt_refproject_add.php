@@ -45,21 +45,16 @@
 		$vat = 0;
 		$grandtotal = 0;
 
-		if($countChk == 1){
-			$irDid = $_GET["irDid1"];
+		for ($i = 1; $i <= $countChk; $i++) {
+
+			$irDid = "irDid" . $i;
+			$irDid = $_GET["$irDid"];
 
 			$str_sql = "SELECT * FROM invoice_rcpt_desc_tb AS ird 
 						INNER JOIN customer_tb AS cust ON ird.invrcptD_custid = cust.cust_id 
 						WHERE invrcptD_id = '". $irDid ."'";
 			$obj_rs = mysqli_query($obj_con, $str_sql);
 			$obj_row = mysqli_fetch_array($obj_rs);
-			$check_irid = $obj_row["invrcptD_irid"];
-			
-			if($check_irid != ""){
-				$sql_invrcpt = "SELECT * FROM invoice_rcpt_tb WHERE invrcpt_id = '$check_irid'";
-				$query_invrcpt = mysqli_query($obj_con,$sql_invrcpt);
-				$obj_invrcpt = mysqli_fetch_assoc($query_invrcpt);
-			}
 
 			$desc1 = $obj_row["invrcptD_description1"];
 			$desc2 = $obj_row["invrcptD_description2"];
@@ -72,61 +67,24 @@
 			$desc9 = $obj_row["invrcptD_description9"];
 			$desc10 = $obj_row["invrcptD_description10"];
 			$desc11 = $obj_row["invrcptD_description11"];
-		
-			$amount1 = $obj_row['invrcptD_amount1'] - $obj_invrcpt['invrcpt_amount1'];
-			$amount2 = $obj_row['invrcptD_amount2'] - $obj_invrcpt['invrcpt_amount2'];
-			$amount3 = $obj_row['invrcptD_amount3'] - $obj_invrcpt['invrcpt_amount3'];
-			$amount4 = $obj_row['invrcptD_amount4'] - $obj_invrcpt['invrcpt_amount4'];
-			$amount5 = $obj_row['invrcptD_amount5'] - $obj_invrcpt['invrcpt_amount5'];
-			$amount6 = $obj_row['invrcptD_amount6'] - $obj_invrcpt['invrcpt_amount6'];
-			$amount7 = $obj_row['invrcptD_amount7'] - $obj_invrcpt['invrcpt_amount7'];
-			$amount8 = $obj_row['invrcptD_amount8'] - $obj_invrcpt['invrcpt_amount8'];
-		
-			$subtotal = $obj_row['invrcptD_subtotal'] - $obj_invrcpt['invrcpt_subtotal'];
-		}else{
-			for ($i = 1; $i <= $countChk; $i++) {
 
-				$irDid = "irDid" . $i;
-				$irDid = $_GET["$irDid"];
-	
-				$str_sql = "SELECT * FROM invoice_rcpt_desc_tb AS ird 
-							INNER JOIN customer_tb AS cust ON ird.invrcptD_custid = cust.cust_id 
-							WHERE invrcptD_id = '". $irDid ."'";
-				$obj_rs = mysqli_query($obj_con, $str_sql);
-				$obj_row = mysqli_fetch_array($obj_rs);
-	
-				$desc1 = $obj_row["invrcptD_description1"];
-				$desc2 = $obj_row["invrcptD_description2"];
-				$desc3 = $obj_row["invrcptD_description3"];
-				$desc4 = $obj_row["invrcptD_description4"];
-				$desc5 = $obj_row["invrcptD_description5"];
-				$desc6 = $obj_row["invrcptD_description6"];
-				$desc7 = $obj_row["invrcptD_description7"];
-				$desc8 = $obj_row["invrcptD_description8"];
-				$desc9 = $obj_row["invrcptD_description9"];
-				$desc10 = $obj_row["invrcptD_description10"];
-				$desc11 = $obj_row["invrcptD_description11"];
-	
-	
-				$amount1 += $obj_row["invrcptD_amount1"];
-				$amount2 += $obj_row["invrcptD_amount2"];
-				$amount3 += $obj_row["invrcptD_amount3"];
-				$amount4 += $obj_row["invrcptD_amount4"];
-				$amount5 += $obj_row["invrcptD_amount5"];
-				$amount6 += $obj_row["invrcptD_amount6"];
-				$amount7 += $obj_row["invrcptD_amount7"];
-				$amount8 += $obj_row["invrcptD_amount8"];
-	
-				$subtotal += $obj_row["invrcptD_subtotal"];
-				$vat += $obj_row["invrcptD_vat"];
-				$grandtotal += $obj_row["invrcptD_grandtotal"];
-	
-				$amount = $amount1 + $amount2 + $amount3 + $amount4 + $amount5 + $amount6 + $amount7 + $amount8;
-	
-			}
+
+			$amount1 += $obj_row["invrcptD_amount1"];
+			$amount2 += $obj_row["invrcptD_amount2"];
+			$amount3 += $obj_row["invrcptD_amount3"];
+			$amount4 += $obj_row["invrcptD_amount4"];
+			$amount5 += $obj_row["invrcptD_amount5"];
+			$amount6 += $obj_row["invrcptD_amount6"];
+			$amount7 += $obj_row["invrcptD_amount7"];
+			$amount8 += $obj_row["invrcptD_amount8"];
+
+			$subtotal += $obj_row["invrcptD_subtotal"];
+			$vat += $obj_row["invrcptD_vat"];
+			$grandtotal += $obj_row["invrcptD_grandtotal"];
+
+			$amount = $amount1 + $amount2 + $amount3 + $amount4 + $amount5 + $amount6 + $amount7 + $amount8;
+
 		}
-
-
 
 ?>
 <!DOCTYPE html>
@@ -418,8 +376,8 @@
 										<div class="text-center" style="background-color: #E9ECEF; padding: 12px 0; border: 1px solid #000;">
 											<b>จำนวนเงิน</b>
 										</div>
-										<input type="text" class="form-control text-right my-1" name="amount1" id="amount1" autocomplete="off" tabindex="15" value="<?=number_format($amount1,2);?>">
-										<input type="text" class="form-control text-right my-1 d-none" name="amountHidden1" id="amountHidden1" value="<?=$amount1;?>">
+										<input type="text" class="form-control text-right my-1" name="amount1" id="amount1" autocomplete="off" tabindex="15" value="<?=number_format($amount,2);?>">
+										<input type="text" class="form-control text-right my-1 d-none" name="amountHidden1" id="amountHidden1" value="<?=$amount;?>">
 										<input type="text" class="form-control text-right my-1" name="amount2" id="amount2" autocomplete="off" tabindex="16" value="0.00">
 										<input type="text" class="form-control text-right my-1 d-none" name="amountHidden2" id="amountHidden2" value="0.00">
 										<input type="text" class="form-control text-right my-1" name="amount3" id="amount3" autocomplete="off" tabindex="17" value="0.00">

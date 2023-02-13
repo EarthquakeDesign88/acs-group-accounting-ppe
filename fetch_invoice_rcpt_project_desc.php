@@ -63,44 +63,33 @@
 		$total = 0;
 
 		foreach($obj_query as $obj_row) {
-			$check_subtotal = 0;
+
 			if($obj_row["invrcptD_irid"] == '') {
 				$text = 'display: block';
 				$desctext = 'รอแจ้งหนี้';
 				$invoiceNo = '';
 				$sty = 'color: #FF9900; font-weight: 700;';
 			} else {
-				
-				$str_sql_ir = "SELECT *,SUM(invrcpt_subtotal) as sum_subtotal FROM invoice_rcpt_tb AS ir INNER JOIN invoice_rcpt_desc_tb AS ird ON ir.invrcpt_irDid = ird.irDid WHERE ir.invrcpt_irDid = '". $obj_row["irDid"] ."'";
+
+				$str_sql_ir = "SELECT * FROM invoice_rcpt_tb AS ir INNER JOIN invoice_rcpt_desc_tb AS ird ON ir.invrcpt_id = ird.invrcptD_irid WHERE invrcptD_id = '". $obj_row["invrcptD_id"] ."'";
 				$obj_rs_ir = mysqli_query($obj_con, $str_sql_ir);
 				$obj_row_ir = mysqli_fetch_array($obj_rs_ir);
 				
 				// echo $str_sql_ir;
 				
-				$check_irid = $obj_row["invrcptD_irid"];
-				
-				$check_subtotal = $obj_row['invrcptD_subtotal'] - $obj_row_ir['sum_subtotal'];
-				
-				if($obj_row_ir["invrcpt_book"] == '') {
-					$invoiceNo = '('. $obj_row_ir["invrcpt_no"] .')';
+				if($obj_row_ir["invrcptD_irid"] == '') {
+					$invoiceNo = '';
 				} else {
-					$invoiceNo = '('. $obj_row_ir["invrcpt_book"].'/'.$obj_row_ir["invrcpt_no"] .')';
-				}
-				
-				if($check_irid != '' && $check_subtotal != 0) {
-
-					$text = 'display: block';
-					$desctext = 'ชำระบางส่วน <br> ';
-					$sty = 'color: red;';
-
-				} else {
-					
-					$text = 'display: none';
-					$desctext = 'ออกใบแจ้งหนี้แล้ว <br> ';
-					$sty = 'color: #008800;';
+					if($obj_row_ir["invrcpt_book"] == '') {
+						$invoiceNo = '('. $obj_row_ir["invrcpt_no"] .')';
+					} else {
+						$invoiceNo = '('. $obj_row_ir["invrcpt_book"].'/'.$obj_row_ir["invrcpt_no"] .')';
+					}
 				}
 
-
+				$text = 'display: none';
+				$desctext = 'ออกใบแจ้งหนี้แล้ว <br> '. $invoiceNo;
+				$sty = 'color: #008800;';
 
 			}
 
@@ -167,16 +156,8 @@
 								<b>รายการ : </b>'. $obj_row["invrcptD_description1"] .' '. $obj_row["invrcptD_description2"] .'
 							</td>
 							<td class="text-right">
-								'. number_format($obj_row["invrcptD_subtotal"],2) .'<br>';
-							
-							if($check_subtotal == 0){
-								$output	.=	'<span></span>';
-								
-							}else{
-								$output .=  '<span class="text-danger">'. number_format($check_subtotal,2) .'</span>';
-
-							}
-		$output	.=			'</td>
+								'. number_format($obj_row["invrcptD_subtotal"],2) .'
+							</td>
 							<td class="text-center" style="'. $sty .'">
 								'. $desctext .'
 							</td>
@@ -265,15 +246,14 @@
 		$obj_rs_sumINVSub = mysqli_query($obj_con, $str_sql_sumINVSub);
 		$sumINVSub = 0;
 		while ($obj_row_sumINVSub = mysqli_fetch_array($obj_rs_sumINVSub)) {
-			$sumINVSub = $obj_row_sumINVSub["invrcpt_subtotal"] + $sumINVSub;
+			$sumINVSub = $obj_row_sumINVSub["invrcptD_subtotal"] + $sumINVSub;
 		}
 
-		$str_sql_sumre = "SELECT * FROM invoice_rcpt_tb AS ir INNER JOIN receipt_tb AS r ON ir.invrcpt_reid = r.re_id INNER JOIN invoice_rcpt_desc_tb AS ird ON ir.invrcpt_id = ird.invrcptD_irid WHERE invrcptD_projid = '". $_POST['queryProj'] ."'";
+		$str_sql_sumre = "SELECT * FROM invoice_rcpt_tb AS ir INNER JOIN receipt_tb AS r ON ir.invrcpt_reid = r.re_id WHERE invrcpt_projid = '". $_POST['queryProj'] ."'";
 		$obj_rs_sumre = mysqli_query($obj_con, $str_sql_sumre);
+		$obj_row_sumre = mysqli_fetch_array($obj_rs_sumre);
 		$sumSubRe = 0;
-		while ($obj_row_sumre = mysqli_fetch_array($obj_rs_sumre)) {
-			$sumSubRe = $obj_row_sumre["invrcpt_subtotal"] + $sumSubRe;
-		}
+		$sumSubRe = $obj_row_sumre["invrcpt_subtotal"] - $obj_row_sumre["invrcpt_balancetotal"];
 
 		
 
@@ -356,10 +336,10 @@
 
 						var check = document.getElementById("invrcptstatus"+selirDid).value;
 						var x = document.getElementById("valnet"+selirDid).value;
-						
+
 						if (check == 0) {
 
-							// alert("Select : ",sts);
+							// alert("Select : 1");
 
 							document.getElementById("tr"+selirDid).style.backgroundColor = "#DAFFCC";
 							document.getElementById("invrcptstatus"+selirDid).value = 1;
@@ -381,8 +361,7 @@
 							});
 
 							$("#CountChkAll").val(count);
-							console.log(count)
-							console.log(selirDid)
+
 							$.ajax({
 								data: {selirDid:selirDid, sts:sts},
 								type: "post",
@@ -395,7 +374,7 @@
 
 						} else {
 
-							// alert("No Select : ",sts);
+							// alert("No Select : 0");
 							
 							document.getElementById("tr"+selirDid).style.backgroundColor = "#FFFFFF";
 							document.getElementById("invrcptstatus"+selirDid).value = 0;

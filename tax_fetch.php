@@ -67,6 +67,19 @@
 			$dep_name = $obj_row['dep_name'];
 			$y = $obj_row['tax_year'];
 			$m = $obj_row['tax_month'];
+
+			if($obj_row['tax_comp_id'] == "C009"){
+				$edit = "tax_edit_TBRI.php?cid=". $obj_row['tax_comp_id'] ."&dep=". $obj_row["dep_id"] ."&taxid=". $obj_row['tax_id'];
+				$export_excel = "report_taxpurchase_export_TBRI.php?tax_id=". $obj_row['tax_id'] ."&export=excel";
+				$export_pdf = "report_taxpurchase_export_TBRI.php?tax_id=". $obj_row['tax_id'] ."&export=pdf";
+	
+			}else{
+				$edit = "tax_edit.php?cid=". $obj_row['tax_comp_id'] ."&dep=". $obj_row["dep_id"] ."&taxid=". $obj_row['tax_id'];
+				$export_excel = "report_taxpurchase_export.php?tax_id=". $obj_row['tax_id'] ."&export=excel";
+				$export_pdf = "report_taxpurchase_export.php?tax_id=". $obj_row['tax_id'] ."&export=pdf";
+	
+			}
+
 			if(strlen($m) == 1){
 				$m = '0' . $m;
 			}
@@ -91,16 +104,16 @@
 							</td>
 							<td class="text-right">
 								<div class="d-flex btn-group btn-group-toggle">
-									<a href="tax_edit.php?cid='. $obj_row['tax_comp_id'] .'&dep='. $obj_row["dep_id"] .'&taxid='. $obj_row['tax_id'] .'" class="btn btn-warning edit_data" type="button" name="edit" title="แก้ไข / Edit">
+									<a href="'.$edit.'" class="btn btn-warning edit_data" type="button" name="edit" title="แก้ไข / Edit">
 										<i class="icofont-edit"></i>
 									</a>
-									<a href="./report_taxpurchase_export.php?tax_id='. $obj_row['tax_id'] .'&export=pdf" target="blank" class="btn btn-primary view_data" name="view" title="ดู / View">
+									<a href="'.$export_pdf.'" target="_blank" class="btn btn-primary view_data" name="view" title="ดู / View">
 										<i class="icofont-eye-alt"></i>
 									</a>
 									<button class="btn btn-danger delete_data" type="button" id="'. $obj_row['tax_id'] .'" title="ลบ / Delete">
 										<i class="icofont-ui-delete"></i>
 									</button>
-									<a href="./report_taxpurchase_export.php?tax_id='. $obj_row['tax_id'] .'&export=excel" class="btn btn-success">
+									<a href="'.$export_excel.'" class="btn btn-success">
 										Export Excel
 									</a>	
 								</div>

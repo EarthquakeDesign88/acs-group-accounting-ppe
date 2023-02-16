@@ -183,7 +183,7 @@ if (!$_SESSION['user_name']) {
                                 <div class="input-group">
                                     <input type="text" name="search_box" id="search_box" class="form-control" placeholder="กรอกเลขที่ภาษีซื้อที่ต้องการค้นหา" autocomplete="off">
                                     <div class="input-group-append">
-                                        <a href="tax_input_add.php?cid=<?php echo $cid; ?>&dep=<?php echo $dep; ?>" class="btn btn-primary float-right">
+                                        <a href="<?= $cid != "C009" ? 'tax_input_add.php?cid='.$cid.'&dep='.$dep : 'tax_input_TBRI.php?cid='.$cid.'&dep='.$dep ?>" class="btn btn-primary float-right">
                                             <i class="icofont-plus-circle"></i>&nbsp;&nbsp;เพิ่มภาษีซื้อ
                                         </a>
                                     </div>

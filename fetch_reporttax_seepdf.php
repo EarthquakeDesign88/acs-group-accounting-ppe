@@ -78,17 +78,25 @@
 
 		foreach($obj_query as $obj_row) {
 			$dep_name = $obj_row['dep_name'];
+
+			if($obj_row['tax_comp_id'] == "C009"){
+				$export_pdf = "report_taxpurchase_export_TBRI.php?tax_id=". $obj_row['tax_id'] ."&export=pdf";
+	
+			}else{
+				$export_pdf = "report_taxpurchase_export.php?tax_id=". $obj_row['tax_id'] ."&export=pdf";
+			}
+
 			$output .= '<tr>
                 <td>'. $obj_row['tax_id'] .'</td>
                 <td>'. $obj_row['tax_number'] .'</td>
                 <td class="text-center">'. MonthThaiShort($obj_row['tax_created_at']) .'</td>
                 <td>
 								
-                <a href="./receipt_taxpurchase/'.$dep_name.'/'.$y.'/'.$m.'/'.$obj_row['tax_file'].'?v='.microtime(true).'" target="blank" class="btn btn-primary view_data form-control mb-1" title="ดู / View">
+                <a href="'.$export_pdf.'" target="blank" class="btn btn-primary view_data form-control mb-1" title="ดู / View">
                     <i class="icofont-eye-alt"></i>&nbsp;&nbsp;View
                 </a>
 
-                <a href="./receipt_taxpurchase/'.$dep_name.'/'.$y.'/'.$m.'/'.$obj_row['tax_file'].'" download class="btn btn-success form-control mb-1" target="_blank">
+                <a href="'.$export_pdf.'" download class="btn btn-success form-control mb-1" target="_blank">
                     <i class="icofont-download-alt"></i>&nbsp;&nbsp;Downlaod
                 </a>
             

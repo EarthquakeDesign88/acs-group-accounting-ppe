@@ -13,7 +13,7 @@
 			while ($obj_row_c = mysqli_fetch_array($obj_rs_c)) {
 				$id = $obj_row_c['paya_id'];
 				$name_search_c = str_replace($_POST['query_payable'], '<b><font color="#417fe2">'.$_POST['query_payable'].'</font></b>',  $obj_row_c['paya_name']);
-				$output_c .= '<li class="list-group-item list-group-item-action border-1 payable_row text-left" id="'. $id .'" onclick="putValueCust(\''.str_replace("'", "\'", $obj_row_c['paya_name']).'\' , \''.str_replace("'", "\'", $obj_row_c['paya_id']).'\')"><i class="icofont-building pr-3"></i>' . $name_search_c . '</li>';
+				$output_c .= '<li class="list-group-item list-group-item-action border-1 payable_row text-left" data-type="'.$obj_row_c['paya_taxno'].'" id="'. $id .'" onclick="putValueCust(\''.str_replace("'", "\'", $obj_row_c['paya_name']).'\' , \''.str_replace("'", "\'", $obj_row_c['paya_id']).'\')"><i class="icofont-building pr-3"></i>' . $name_search_c . '</li>';
 			}
 		} else {
 			$output_c .= '<li class="list-group-item border-1">

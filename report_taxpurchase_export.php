@@ -64,6 +64,7 @@ if(isset($_GET['export'])){
         $download = 0;
 	}else if($_GET['export']== 'pdf'){
 	    $expprt_pdf = true;
+        $filename = "รายงานใบภาษีซื้อรายเดือน" . $obj_row_tax['tax_id'] . ".pdf";
 	}
 }
 

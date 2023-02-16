@@ -75,217 +75,6 @@
                     }
                     $tax = $code . $obj_result_d['dep_name'] . $year_head. $month_head . $max; 
                 }
-            
-                // Require composer autoload
-                require_once __DIR__ . '/vendor/autoload.php';
-
-                $defaultConfig = (new Mpdf\Config\ConfigVariables())->getDefaults();
-                $fontDirs = $defaultConfig['fontDir'];
-
-                $defaultFontConfig = (new Mpdf\Config\FontVariables())->getDefaults();
-                $fontData = $defaultFontConfig['fontdata'];
-
-                $mpdf = new \Mpdf\Mpdf([
-                    'useActiveForms' => true,
-                    'mode' => 'utf-8',
-                    'format' => 'A4',
-                    // 'format' => 'A5',
-                    'margin_top' => 46,
-                    'margin_bottom' => 5,
-                    'margin_left' => 5,
-                    'margin_right' => 2,
-                    // 'margin_header' => 5,    
-                    // 'margin_footer' => 5,     
-                    'tempDir' => __DIR__ . '/tmp/',
-                    // 'default_font_size' => 14,
-                    'fontdata' => $fontData + [
-                        'sarabun' => [
-                            'R' => 'THSarabunNew.ttf',
-                            'I' => 'THSarabunNewItalic.ttf',
-                            'B' =>  'THSarabunNewBold.ttf',
-                            'BI' => "THSarabunNewBoldItalic.ttf",
-                        ]
-                    ],
-                ]);
-
-                $path = "receipt_taxpurchase/";
-                !file_exists($path) && mkdir($path , 0777);
-                $dep_name = $obj_result_d['dep_name'];
-                $time  = strtotime($date);
-                $month = date('m',$time);
-                $year  = date('Y',$time) + 543;
-                $pathDep = $path . $dep_name;
-
-                $year_folder = $pathDep . '/' . $year;
-                $month_folder = $year_folder . '/' . $month;
-
-                !file_exists($pathDep) && mkdir($pathDep , 0777);
-                !file_exists($year_folder) && mkdir($year_folder , 0777);
-                !file_exists($month_folder) && mkdir($month_folder, 0777);
-
-                $type = ".pdf";
-                $newname = $tax .$type;
-                $pathCopy = $month_folder . '/' . $newname;
-
-                $filename = $pathCopy;
-                $date_head = DateMonthThai($date,"head");
-                $header = '
-                <table cellspacing="0" cellpadding="0" border="0" width="100%">
-                    <tr>
-                        <td width="33%"></td>
-                        <td width="33%" style="text-align: center; font-size: 18pt;">
-                            <b>รายงานภาษีซื้อ</b>
-                        </td>
-                        <td width="33%" style="text-align: right; font-size: 12pt;"><strong>หน้า {PAGENO}/{nb}</strong></td>
-                    </tr>
-				</table>
-                <table cellspacing="0" cellpadding="0" border="0" width="100%">
-                    <tr>
-                        <td style="text-align: center; font-size: 16pt;">
-                            <b>เดือน '. $date_head[1] . ' ' . $date_head[2] .'</b>
-                        </td>
-                    </tr>
-                </table>
-                <table cellspacing="0" cellpadding="0" border="0" width="100%">
-                    <tr>
-                        <td width="20%" style="font-size: 12pt; padding: 3px 0px">
-                            <b>ชื่อผู้ประกอบการ</b>
-                        </td>
-                        <td width="45%" style="font-size: 12pt; padding: 3px 0px">
-                            <b>'. $obj_result_c['comp_name'] .'</b>
-                        </td>
-                        <td style="font-size: 12pt;">
-                            <b>เลขประจำตัวผู้เสียภาษีอากร '. $tax_no .'</b>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="20%" style="font-size: 12pt; padding: 3px 0px">
-                            <b>ชื่อสถานประกอบการ</b>
-                        </td>
-                        <td width="45%" style="font-size: 12pt; padding: 3px 0px">
-                            <b>'. $obj_result_c['comp_name'] .'</b>
-                        </td>
-                        <td style="font-size: 12pt; padding: 3px 0px">
-                            <b>สำนักงานใหญ่</b>
-                        </td>
-                    </tr>
-                </table>
-
-                <table cellspacing="0" cellpadding="0" border="0" width="100%">
-                    <tr>
-                        <td style="height: 10px"></td>
-                    </tr>
-                </table>
-                ';
-
-                ob_start(); // Start get HTML code
-
-                ?>
-                <!DOCTYPE html>
-
-                <head>
-                    
-                    <title>ใบภาษีซื้อ <?= $tax ?></title>
-                    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-                    <meta name="viewport" content="width=device-width, initial-scale=1">
-                    <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
-
-                    <style>
-                        body {
-                            font-family: 'Sarabun', sans-serif;
-                        }
-                        table {
-                            padding: 1px 0px;
-                            overflow: wrap;
-                            font-size: 11pt;
-                            border-collapse: collapse;
-                        }
-
-                        table.txtbody td {
-                            text-align: center;
-                            vertical-align: top;
-                        }
-                        table.txtbody td, table.txtbody th {
-                            border: 1px solid #000;
-                            padding: 3px 2px;
-                        }
-                        .loader {
-                            position: absolute;
-                            left: 50%;
-                            top: 50%;
-                            z-index: 1;
-                            width: 60px;
-                            height: 60px;
-                            margin: -76px 0 0 -76px;
-                            border: 16px solid #f3f3f3;
-                            border-radius: 50%;
-                            border-top: 16px solid #3498db;
-                            -webkit-animation: spin 2s linear infinite;
-                                    animation: spin 2s linear infinite;
-                        }
-
-                        .tb{
-                            border: 1px solid #000;
-                            margin: 0;
-                            padding: 0;
-                            box-sizing: border-box;
-                        }
-                        
-                        /* Safari */
-                        @-webkit-keyframes spin {
-                            0% { -webkit-transform: rotate(0deg); }
-                            100% { -webkit-transform: rotate(360deg); }
-                        }
-
-                        @keyframes spin {
-                            0% { transform: rotate(0deg); }
-                            100% { transform: rotate(360deg); }
-                        }
-                    </style>
-
-                </head>
-                <body>
-                    <table class="txtbody" cellspacing="0" cellpadding="0" border="0" width="100%">
-                    <thead>
-                        <tr>
-                            <th width="4%">ลำดับ</th>
-                            <th width="8%">วันที่</th>
-                            <th width="20%">เล่มที่/เลขที่</th>
-                            <th width="40%">ชื่อผู้ซื้อ/ผู้ให้บริการ/รายการ</th>
-                            <th width="10%">จำนวนเงิน</th>
-                            <th width="9%">ภาษีมูลค่าเพิ่ม</th>
-                            <th width="9%">จำนวนเงินรวม</th>
-                        </tr>
-                    </thead>
-                    
-                        <?php for($i = 0; $i < count($data); $i++) { ?>
-                        <?php $date_check = DateMonthThai($data[$i]['date_input'],"body"); ?>
-                        
-                        <tr>
-                            <td width="4%"><?= $i + 1; ?></td>
-                            <td width="8%"><?= $date_check[0] . " " . $date_check[1] . " " .$date_check[2] ?></td>
-                            <td width="20%"><?= $data[$i]['book_number_input']; ?></td>
-                            <td width="40%" style="text-align: left;"><?= $data[$i]['company_input'] .' / '. $data[$i]['list_input']; ?></td>
-                            <td width="10%" style="text-align: right;"><?= number_format($data[$i]['price_input'],2); ?></td>
-                            <td width="9%" style="text-align: right;"><?= number_format($data[$i]['vat_input'],2); ?></td>
-                            <td width="9%" style="text-align: right;"><?= number_format($data[$i]['result_input'],2); ?></td>
-                        </tr>
-                        <?php } ?>
-
-                        <tr>
-                            <td colspan="4" style="text-align: center;"><b>รวมยอด</b></td>
-                            <td style="text-align: right;" class="tb"><b><?= number_format($price_all,2)?></b></td>
-                            <td style="text-align: right;" class="tb"><b><?= number_format($vat_all,2)?></b></td>
-                            <td style="text-align: right;" class="tb"><b><?= number_format($result_all,2)?></b></td>
-                        </tr>
-                    </table>
-                </body>';
-                <?php
-                    $html = ob_get_contents();
-                    $mpdf->SetHeader($header);
-                    $mpdf->WriteHTML($html);
-                    $mpdf->Output($filename);
-                    ob_end_clean();
                 
                 $user_id = $_SESSION["user_id"];
                 $date_created = date("Y-m-d h:i:s");
@@ -337,215 +126,6 @@
                 $sql_query_c = "SELECT comp_name FROM company_tb WHERE comp_id = '$comp_id'";
                 $obj_row_c = mysqli_query($obj_con,$sql_query_c);
                 $obj_result_c = mysqli_fetch_assoc($obj_row_c);
-                
-                require_once __DIR__ . '/vendor/autoload.php';
-
-                $defaultConfig = (new Mpdf\Config\ConfigVariables())->getDefaults();
-                $fontDirs = $defaultConfig['fontDir'];
-
-                $defaultFontConfig = (new Mpdf\Config\FontVariables())->getDefaults();
-                $fontData = $defaultFontConfig['fontdata'];
-
-                $mpdf = new \Mpdf\Mpdf([
-                    'useActiveForms' => true,
-                    'mode' => 'utf-8',
-                    'format' => 'A4',
-                    // 'format' => 'A5',
-                    'margin_top' => 46,
-                    'margin_bottom' => 5,
-                    'margin_left' => 5,
-                    'margin_right' => 2,
-                    // 'margin_header' => 5,    
-                    // 'margin_footer' => 5,     
-                    'tempDir' => __DIR__ . '/tmp/',
-                    // 'default_font_size' => 14,
-                    'fontdata' => $fontData + [
-                        'sarabun' => [
-                            'R' => 'THSarabunNew.ttf',
-                            'I' => 'THSarabunNewItalic.ttf',
-                            'B' =>  'THSarabunNewBold.ttf',
-                            'BI' => "THSarabunNewBoldItalic.ttf",
-                        ]
-                    ],
-                ]);
-
-                $path = "receipt_taxpurchase/";
-                !file_exists($path) && mkdir($path , 0777);
-                $dep_name = $dep_name;
-                $time  = strtotime($date);
-                $month = date('m',$time);
-                $year  = date('Y',$time) + 543;
-                $pathDep = $path . $dep_name;
-
-                $year_folder = $pathDep . '/' . $year;
-                $month_folder = $year_folder . '/' . $month;
-
-                !file_exists($pathDep) && mkdir($pathDep , 0777);
-                !file_exists($year_folder) && mkdir($year_folder , 0777);
-                !file_exists($month_folder) && mkdir($month_folder, 0777);
-
-                $type = ".pdf";
-                $newname = $tax_id .$type;
-                $pathCopy = $month_folder . '/' . $newname;
-
-                $filename = $pathCopy;
-                $date_head = DateMonthThai($date,"head");
-
-                $header = '
-                <table cellspacing="0" cellpadding="0" border="0" width="100%">
-                    <tr>
-                        <td width="33%"></td>
-                        <td width="33%" style="text-align: center; font-size: 18pt;">
-                            <b>รายงานภาษีซื้อ</b>
-                        </td>
-                        <td width="33%" style="text-align: right; font-size: 12pt;"><strong>หน้า {PAGENO}/{nb}</strong></td>
-                    </tr>
-				</table>
-                <table cellspacing="0" cellpadding="0" border="0" width="100%">
-                    <tr>
-                        <td style="text-align: center; font-size: 16pt;">
-                            <b>เดือน '. $date_head[1] . ' ' . $date_head[2] .'</b>
-                        </td>
-                    </tr>
-                </table>
-                <table cellspacing="0" cellpadding="0" border="0" width="100%">
-                    <tr>
-                        <td width="20%" style="font-size: 12pt; padding: 3px 0px">
-                            <b>ชื่อผู้ประกอบการ</b>
-                        </td>
-                        <td width="45%" style="font-size: 12pt; padding: 3px 0px">
-                            <b>'. $obj_result_c['comp_name'] .'</b>
-                        </td>
-                        <td style="font-size: 12pt;">
-                            <b>เลขประจำตัวผู้เสียภาษีอากร '. $tax_number .'</b>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="20%" style="font-size: 12pt; padding: 3px 0px">
-                            <b>ชื่อสถานประกอบการ</b>
-                        </td>
-                        <td width="45%" style="font-size: 12pt; padding: 3px 0px">
-                            <b>'. $obj_result_c['comp_name'] .'</b>
-                        </td>
-                        <td style="font-size: 12pt; padding: 3px 0px">
-                            <b>สำนักงานใหญ่</b>
-                        </td>
-                    </tr>
-                </table>
-
-                <table cellspacing="0" cellpadding="0" border="0" width="100%">
-                    <tr>
-                        <td style="height: 10px"></td>
-                    </tr>
-                </table>';
-
-                ob_start(); // Start get HTML code
-
-                ?>
-                <!DOCTYPE html>
-
-                <head>
-                    
-                    <title>ใบภาษีซื้อ <?= $tax_id ?></title>
-                    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-                    <meta name="viewport" content="width=device-width, initial-scale=1">
-                    <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
-
-                    <style>
-                        body {
-                            font-family: 'Sarabun', sans-serif;
-                        }
-                        table {
-                            padding: 1px 0px;
-                            overflow: wrap;
-                            font-size: 11pt;
-                            border-collapse: collapse;
-                        }
-
-                        table.txtbody td {
-                            text-align: center;
-                            vertical-align: top;
-                        }
-                        table.txtbody td, table.txtbody th {
-                            border: 1px solid #000;
-                            padding: 3px 2px;
-                        }
-                        .loader {
-                            position: absolute;
-                            left: 50%;
-                            top: 50%;
-                            z-index: 1;
-                            width: 60px;
-                            height: 60px;
-                            margin: -76px 0 0 -76px;
-                            border: 16px solid #f3f3f3;
-                            border-radius: 50%;
-                            border-top: 16px solid #3498db;
-                            -webkit-animation: spin 2s linear infinite;
-                                    animation: spin 2s linear infinite;
-                        }
-
-                        .tb{
-                            border: 1px solid #000;
-                            margin: 0;
-                            padding: 0;
-                            box-sizing: border-box;
-                        }
-                        
-                        /* Safari */
-                        @-webkit-keyframes spin {
-                            0% { -webkit-transform: rotate(0deg); }
-                            100% { -webkit-transform: rotate(360deg); }
-                        }
-
-                        @keyframes spin {
-                            0% { transform: rotate(0deg); }
-                            100% { transform: rotate(360deg); }
-                        }
-                    </style>
-
-                </head>
-                <body>
-                    <table class="txtbody" cellspacing="0" cellpadding="0" border="0" width="100%">
-                    <thead>
-                        <tr>
-                            <th width="4%">ลำดับ</th>
-                            <th width="8%">วันที่</th>
-                            <th width="20%">เล่มที่/เลขที่</th>
-                            <th width="40%">ชื่อผู้ซื้อ/ผู้ให้บริการ/รายการ</th>
-                            <th width="10%">จำนวนเงิน</th>
-                            <th width="9%">ภาษีมูลค่าเพิ่ม</th>
-                            <th width="9%">จำนวนเงินรวม</th>
-                        </tr>
-                    </thead>
-                        
-                        <?php for($i = 0; $i < count($data); $i++) { ?>
-                        <?php $date_check = DateMonthThai($data[$i]['date_input'],"body"); ?>
-                        <tr>
-                            <td width="4%"><?= $i + 1; ?></td>
-                            <td width="8%"><?= $date_check[0] . " " . $date_check[1] . " " .$date_check[2] ?></td>
-                            <td width="20%"><?= $data[$i]['book_number_input'] ?></td>
-                            <td width="40%" style="text-align: left;"><?= $data[$i]['company_input'] . ' / ' . $data[$i]['list_input']?></td>
-                            <td width="10%" style="text-align: right;"><?= number_format($data[$i]['price_input'],2) ?></td>
-                            <td width="9%" style="text-align: right;"><?= number_format($data[$i]['vat_input'],2) ?></td>
-                            <td width="9%" style="text-align: right;"><?= number_format($data[$i]['result_input'],2) ?></td>
-                        </tr>
-                        <?php } ?>
-
-                        <tr>
-                            <td colspan="4" style="text-align: center;"><b>รวมยอด</b></td>
-                            <td style="text-align: right;" class="tb"><b><?= number_format($price_all,2) ?></b></td>
-                            <td style="text-align: right;" class="tb"><b><?= number_format($vat_all,2) ?></b></td>
-                            <td style="text-align: right;" class="tb"><b><?= number_format($result_all,2) ?></b></td>
-                        </tr>
-                    </table>
-                </body>';
-                <?php
-                    $html = ob_get_contents();
-                    $mpdf->SetHeader($header);
-                    $mpdf->WriteHTML($html);
-                    $mpdf->Output($filename);
-                    ob_end_clean();
 
                 $user_id = $_SESSION['user_id'];
                 $date_n = date("Y-m-d h:i:s");
@@ -578,6 +158,113 @@
                     }
                 }
                 echo json_encode(['message'=>'success','tax_id'=>$tax_id]);
+                mysqli_close($obj_con);
+
+            }else if($_POST['action'] === "create_tbri"){
+                include 'connect.php';
+
+                $obj = array();
+
+                foreach($_POST as $key=>$value){
+                    $obj[$key] = $value;
+                }
+
+                $code = "TAX";
+                $year_head = substr(date("Y")+543,-2);
+                $month_head = date("m",strtotime($obj['date_head']));
+                $dep_check = "TBRI";
+                $sql_query = "SELECT tax_id FROM taxpurchase_tb WHERE tax_dep_id = 'D013' ORDER BY tax_id DESC";
+                $obj_row = mysqli_query($obj_con,$sql_query);
+                $obj_result = mysqli_fetch_array($obj_row);
+
+                if(mysqli_num_rows($obj_row) == 0){
+                    $tax = $code . $dep_check . $year_head. $month_head . "0001";  
+                }else{
+                    $num = $obj_result["tax_id"];
+                    $txt = substr($num,-4);
+                    $number = (int)$txt + 1;
+                    if(strlen($number) == 1){
+                        $max = "000" . $number;
+                    }elseif(strlen($number) == 2){
+                        $max = "00" . $number;
+                    }elseif(strlen($number) == 3){
+                        $max = "0" . $number;
+                    }
+                    $tax = $code . $dep_check . $year_head. $month_head . $max; 
+                }
+
+                $user_id = $_SESSION["user_id"];
+                $date_created = date("Y-m-d h:i:s");
+                $str_sql = "INSERT INTO taxpurchase_tb(tax_id,tax_number,tax_comp_id,tax_created_at,tax_dep_id,tax_file,tax_price,tax_vat,tax_result,user_created,created_at) 
+                VALUES('$tax','0105538106461','C009','".$obj['date_head']."','D013','$newname',".$obj['price_all'].",".$obj['vat_all'].",".$obj['tax_result_all'].",'$user_id','$date_created')";
+                $str_insert = mysqli_query($obj_con,$str_sql);
+
+                $str_sql2 = "INSERT INTO taxpurchaselist_tb(list_tax_id,list_no,list_paya_id,list_desc,list_price,list_vat,list_result,created_at,list_avg_vat_percent) 
+                VALUES";
+                foreach($obj['data'] as $value){
+                    $str_sql2 .= "('$tax','".$value['tax_no']."','".$value['paya_id']."','".$value['list']."','".$value['price']."','".$value['vat']."','".$value['result']."','".$value['date']."','".$value['avg_percent']."'),";
+                }
+                $str_sql2 = substr_replace($str_sql2,";",-1);
+                mysqli_query($obj_con,$str_sql2);
+
+                echo json_encode(['message'=>'success','tax_id'=>$tax]);
+                mysqli_close($obj_con);
+                
+            }else if($_POST['action'] === "update_tbri"){
+                include 'connect.php';
+                $obj = array();
+
+                foreach($_POST as $key=>$value){
+                    $obj[$key] = $value;
+                }
+                                
+                if(!is_null($obj['del_id'])){
+                    $sql_del = "DELETE FROM taxpurchaselist_tb WHERE list_id IN (";
+                    for($i = 0; $i < count($obj['del_id']); $i++){
+                        $sql_del .= "'".$obj['del_id'][$i]."',";
+                        
+                    }
+                    $sql_del = substr_replace($sql_del,")",-1);
+                    mysqli_query($obj_con, $sql_del);
+                }
+
+                $user_id = $_SESSION['user_id'];
+                $date_n = date("Y-m-d h:i:s");
+                $sql_update = "UPDATE taxpurchase_tb SET tax_created_at='".$obj['date_head']."',tax_price=".$obj['price_all'].",tax_vat=".$obj['vat_all'].",tax_result=".$obj['tax_result_all'].",updated_at='$date_n',user_updated='$user_id' WHERE tax_id='".$obj['tax_id']."'";
+                $sql_update_q = mysqli_query($obj_con,$sql_update);
+
+                $sql_insert = "INSERT INTO taxpurchaselist_tb(list_id,list_tax_id,list_no,list_paya_id,list_desc,list_price,list_vat,list_result,created_at,list_avg_vat_percent) 
+                VALUES";
+                foreach($obj['data'] as $value){
+
+                    $sql_insert .= "(CONVERT('".$value['id']."',CHAR),
+                    '".$obj['tax_id']."',
+                    '".$value['tax_no']."',
+                    '".$value['paya_id']."',
+                    '".$value['list']."',
+                    '".$value['price']."',
+                    '".$value['vat']."',
+                    '".$value['result']."',
+                    '".$value['date']."',
+                    '".$value['avg_percent']."'),";                      
+                }
+                
+                $sql_insert = substr_replace($sql_insert," ",-1);
+
+                $sql_insert .= "ON DUPLICATE KEY UPDATE list_id = VALUES(list_id),
+                list_tax_id = VALUES(list_tax_id),
+                list_no = VALUES(list_no),
+                list_paya_id = VALUES(list_paya_id),
+                list_desc = VALUES(list_desc),
+                list_price = VALUES(list_price),
+                list_vat = VALUES(list_vat),
+                list_result = VALUES(list_result),
+                created_at = VALUES(created_at),
+                list_avg_vat_percent = VALUES(list_avg_vat_percent);";  
+               
+                mysqli_query($obj_con,$sql_insert);
+                
+                echo json_encode(['message'=>'success','tax_id'=>$obj['tax_id']]);
                 mysqli_close($obj_con);
             }
         }

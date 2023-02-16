@@ -77,6 +77,13 @@
 			$y = $obj_row['tax_year'];
 			$m = $obj_row['tax_month'];
 
+			if($obj_row['tax_comp_id'] == "C009"){
+				$export_pdf = "report_taxpurchase_export_TBRI.php?tax_id=". $obj_row['tax_id'] ."&export=pdf";
+	
+			}else{
+				$export_pdf = "report_taxpurchase_export.php?tax_id=". $obj_row['tax_id'] ."&export=pdf";
+			}
+
 			if(strlen($m) == 1){
 				$m = '0' . $m;
 			}
@@ -100,7 +107,7 @@
 								' . number_format($obj_row['tax_result'],2) . '
 							</td>
 							<td class="text-center">
-								<a href="./receipt_taxpurchase/'.$dep_name.'/'.$y.'/'.$m.'/'.$obj_row['tax_file'].'" download class="btn btn-success" target="blank">
+								<a href="'.$export_pdf.'" download class="btn btn-success" target="blank">
 									<i class="icofont-download-alt"></i>&nbsp;&nbsp;Downlaod
 								</a>
 							</td>
